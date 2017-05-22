@@ -38,6 +38,8 @@ gem 'jbuilder', '~> 2.5'
 
 # 登录
 gem 'devise'
+# Devise 翻译档
+gem "devise-i18n"
 
 # 前端
 gem 'bootstrap-sass'
@@ -55,6 +57,7 @@ gem 'mini_magick'
 
 # Rails Console 排版
 gem 'awesome_rails_console'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
