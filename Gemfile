@@ -34,6 +34,27 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# =====  专案使用到的 Gem ===== #
+
+# 登录
+gem 'devise'
+
+# 前端
+gem 'bootstrap-sass'
+gem 'simple_form'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
+gem 'font-awesome-rails'
+
+# 搜索
+gem 'ransack'
+
+# 图片
+gem 'carrierwave'
+gem 'mini_magick'
+
+# Rails Console 排版
+gem 'awesome_rails_console'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
