@@ -1,3 +1,23 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.block-1 {
+  background-image: url("fly-8.jpg");
+  background-size: cover;
+  background-position: 30% 0%;
+  height: 400px;
+
+  h1 {
+    color: white;
+    margin: 100px auto 50px;
+  }
+
+  .btn-learn {
+    background-color: rgba(0, 112, 255, 0.74);
+    border: 1px solid #fff;
+    font-size: 18px;
+    color: #fff;
+    padding: 10px 45px;
+  }
+}
