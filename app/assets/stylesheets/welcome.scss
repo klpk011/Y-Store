@@ -3,21 +3,67 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .block-1 {
-  background-image: url("fly-8.jpg");
+  background-image: url("think.jpg");
   background-size: cover;
-  background-position: 30% 0%;
-  height: 400px;
+  background-position: 50% 50%;
+  height: 500px;
 
   h1 {
-    color: white;
+    color: #d4537d;
     margin: 100px auto 50px;
+  }
+  body, p, ol, ul, td  {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 0;
+    color: #090909;
+    // background-color: #fff;
+    margin: 0 0 50px;
+
   }
 
   .btn-learn {
-    background-color: rgba(0, 112, 255, 0.74);
-    border: 1px solid #fff;
+    background-color: rgba(234, 228, 24, 0.71);
+    border: 5px solid #fff;
     font-size: 18px;
-    color: #fff;
+    color: #333;
     padding: 10px 45px;
+    font-weight: bolder;
   }
+}
+
+.block-2{
+  background-image: url(".jpg");
+  padding-bottom: 200px;
+  background-color: #a7e2ab
+
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.42857143;
+    color: #333333;
+    background-color: #fff;
+}
+}
+
+.block-3{
+  background-image: url(".jpg");
+  padding-bottom: 200px;
+  background-position: 40% 80%;
+
+
+  .well {
+    border-radius: 15px;
+  }
+}
+
+.block-4 {
+  background-image: url(".jpg");
+  padding-bottom: 20px;
+  background-position: 50% 50%;
+
+}
+
+.block-5 {
+  background-image: url("businessman-over-a-rocket.jpg");
 }
