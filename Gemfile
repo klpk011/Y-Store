@@ -60,6 +60,9 @@ gem 'qiniu-rs'
 # Rails Console 排版
 gem 'awesome_rails_console'
 
+#管理密码
+gem 'figaro'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
