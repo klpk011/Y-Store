@@ -1,22 +1,122 @@
-<div class="row">
-  <div class="col-md-6">
-    <% if @product.image.present? %>
-      <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
-    <% else %>
-      <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
-    <% end %>
-  </div>
-  <div class="col-md-6">
-    <h2> <%= @product.name %> </h2>
-    <div style="height:100px;">
-      <p>
-        <%= @product.description %>
-      </p>
+
+<div class="container">
+    <div class="page-header">
+
+      <div class="row">
+          <div class="col-md-6">
+              <% if @product.image.present? %>
+                  <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
+              <% else %>
+                  <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
+              <% end %>
+          </div>
+          <div class="col-md-6">
+              <h2> <%= @product.name %> </h2>
+              <div style="height:100px;">
+                  <p>
+                      <%= @product.description %>
+                  </p>
+              </div>
+              <div> 数量 : <%= @product.quantity %> </div>
+              <div class="product-price"> ￥ <%= @product.price %> </div>
+              <div class="pull-right">
+                  <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
+              </div>
+          </div>
+      </div>
+        <h1>详情内容<span class="pull-right label label-default">:)</span></h1>
     </div>
-    <div> 数量 : <%= @product.quantity %> </div>
-    <div class="product-price"> ￥ <%= @product.price %> </div>
-    <div class="pull-right">
-        <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
-    </div>
-  </div>
-</div>
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <!-- <div class="col-md-6"> -->
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="panel with-nav-tabs panel-success">
+                        <div class="panel-heading">
+                            <ul class="nav nav-tabs">
+                                <li class="active" width="330"><a href="#tab1success" data-toggle="tab">课程详情</a></li>
+                                <li><a href="#tab2success" data-toggle="tab">课程表</a></li>
+                                <li><a href="#tab3success" data-toggle="tab">名师介绍</a></li>
+                                <li><a href="#tab4success" data-toggle="tab">报名</a></li>
+                                <li><a href="#tab5success" data-toggle="tab">服务</a></li>
+                                <li><a href="#tab6success" data-toggle="tab">课程评价</a></li>
+                            </ul>
+                        </div>
+                        <div class="panel-body">
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="tab1success">
+                                    适用人群：<%= simple_format(@product.description) %>
+                                    学习目标：<%= simple_format(@product.teaching_objectives) %>
+                                    课程内容：<%= simple_format(@product.Course_Contents) %>
+                                    课程特色：<%= simple_format(@product.course_features) %>
+                                </div>
+                                <div class="tab-pane fade" id="tab2success"><%= simple_format(@product.curriculum) %></div>
+                                <div class="tab-pane fade" id="tab3success"><%= simple_format(@product.Teacher_introduction) %></div>
+                                <div class="tab-pane fade" id="tab4success">
+                                    上课时间<%= simple_format(@product.class_schedule) %>
+                                    上课地点<%= simple_format(@product.class_location) %>
+                                </div>
+                                <div class="tab-pane fade" id="tab5success"><%= simple_format(@product.service) %>
+                                </div>
+                                <div class="tab-pane fade" id="tab6success">
+                                  <p>这个课程还没有人评论，来为它添加一个吧！</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <style>
+                .panel.with-nav-tabs .panel-heading{
+                    padding: 5px 5px 0 5px;
+                }
+                .panel.with-nav-tabs .nav-tabs{
+                	border-bottom: none;
+                }
+                .panel.with-nav-tabs .nav-justified{
+                	margin-bottom: -1px;
+                }
+                /********************************************************************/
+                /*** PANEL SUCCESS ***/
+                .with-nav-tabs.panel-success .nav-tabs > li > a,
+                .with-nav-tabs.panel-success .nav-tabs > li > a:hover,
+                .with-nav-tabs.panel-success .nav-tabs > li > a:focus {
+                	color: #3c763d;
+                }
+                .with-nav-tabs.panel-success .nav-tabs > .open > a,
+                .with-nav-tabs.panel-success .nav-tabs > .open > a:hover,
+                .with-nav-tabs.panel-success .nav-tabs > .open > a:focus,
+                .with-nav-tabs.panel-success .nav-tabs > li > a:hover,
+                .with-nav-tabs.panel-success .nav-tabs > li > a:focus {
+                	color: #3c763d;
+                	background-color: #d6e9c6;
+                	border-color: transparent;
+                }
+                .with-nav-tabs.panel-success .nav-tabs > li.active > a,
+                .with-nav-tabs.panel-success .nav-tabs > li.active > a:hover,
+                .with-nav-tabs.panel-success .nav-tabs > li.active > a:focus {
+                	color: #3c763d;
+                	background-color: #fff;
+                	border-color: #d6e9c6;
+                	border-bottom-color: transparent;
+                }
+                .with-nav-tabs.panel-success .nav-tabs > li.dropdown .dropdown-menu {
+                    background-color: #dff0d8;
+                    border-color: #d6e9c6;
+                }
+                .with-nav-tabs.panel-success .nav-tabs > li.dropdown .dropdown-menu > li > a {
+                    color: #3c763d;
+                }
+                .with-nav-tabs.panel-success .nav-tabs > li.dropdown .dropdown-menu > li > a:hover,
+                .with-nav-tabs.panel-success .nav-tabs > li.dropdown .dropdown-menu > li > a:focus {
+                    background-color: #d6e9c6;
+                }
+                .with-nav-tabs.panel-success .nav-tabs > li.dropdown .dropdown-menu > .active > a,
+                .with-nav-tabs.panel-success .nav-tabs > li.dropdown .dropdown-menu > .active > a:hover,
+                .with-nav-tabs.panel-success .nav-tabs > li.dropdown .dropdown-menu > .active > a:focus {
+                    color: #fff;
+                    background-color: #3c763d;
+                }
+            </style>
