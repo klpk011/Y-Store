@@ -54,6 +54,8 @@ gem 'ransack'
 # 图片
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'carrierwave-qiniu'
+gem 'qiniu-rs'
 
 # Rails Console 排版
 gem 'awesome_rails_console'
