@@ -1,0 +1,53 @@
+<%= simple_form_for [:admin, @product] do |f| %>
+    <div class="group">
+        <%= f.input :name, placeholder: "请输入课程名称"%>
+    </div>
+    <div class="group">
+        <%= f.input :description, placeholder: "请输入课程简介"%>
+    </div>
+    <div class="group">
+        <%= f.input :Applicants, placeholder: "请输入适用人群"%>
+    </div>
+    <div class="group">
+        <%= f.input :teaching_objectives, placeholder: "请输入学习目标"%>
+    </div>
+    <div class="group">
+        <%= f.input :Course_Contents, placeholder: "请输入课程内容"%>
+    </div>
+    <div class="group">
+        <%= f.input :course_features, placeholder: "请输入课程特色"%>
+    </div>
+    <div class="group">
+        <%= f.input :curriculum, placeholder: "请输入课程表"%>
+    </div>
+    <div class="group">
+        <%= f.input :Teacher_introduction, placeholder: "请输入名师介绍"%>
+    </div>
+    <div class="group">
+        <%= f.input :quantity, placeholder: "请输入课程数量" %>
+    </div>
+    <div class="group">
+        <%= f.input :price, placeholder: "请输入课程价格" %>
+    </div>
+    <div class="group">
+        <%= f.input :class_schedule, placeholder: "请输入上课时间"%>
+    </div>
+    <div class="group">
+        <%= f.input :class_location, placeholder: "请输入上课地点"%>
+    </div>
+    <div class="group">
+        <%= f.input :service, placeholder: "请输入服务内容"%>
+    </div>
+    <!-- 判断是否为new页面 -->
+    <% if @product.new_record? %>
+    <% else %>
+        <% if @product.image.present? %>
+            <span>目前课程图</span> <br>
+            <%= image_tag(@product.image.thumb.url) %>
+        <% end %>
+    <% end %>
+    <div class="group">
+        <%= f.input :image, as: :file %>
+    </div>
+    <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
+<% end %>

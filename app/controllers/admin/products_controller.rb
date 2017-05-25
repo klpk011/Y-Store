@@ -45,6 +45,6 @@ end
   private
 
   def product_params
-    params.require(:product).permit(:name, :description, :quantity, :price, :image)
+    params.require(:product).permit(:name, :description, :quantity, :price, :image, :Applicants, :teaching_objectives, :Course_Contents, :course_features, :curriculum, :Teacher_introduction , :class_schedule, :class_location, :service)
   end
 end
