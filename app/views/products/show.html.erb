@@ -47,7 +47,7 @@
                         <div class="panel-body">
                             <div class="tab-content">
                                 <div class="tab-pane fade in active" id="tab1success">
-                                    适用人群：<%= simple_format(@product.description) %>
+                                    适用人群：<%= simple_format(@product.Applicants) %>
                                     学习目标：<%= simple_format(@product.teaching_objectives) %>
                                     课程内容：<%= simple_format(@product.Course_Contents) %>
                                     课程特色：<%= simple_format(@product.course_features) %>
@@ -62,26 +62,28 @@
                                 </div>
                                 <div class="tab-pane fade" id="tab6success">
                                </div>
-                            <!-- 评论功能 -->
-                            <div class="row">
-                                <div class="col-sm-12 ">
-                                    <h4>
-                                        <%= @product.reviews.count %> Reviews
-                                </h4>
-                                    <hr>
-                                    <div >
-                                        <%= render @product.reviews%>
-                                        <%= render "reviews/form"%>
-                                    </div>
 
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                         </div>
                     </div>
                 </div>
                 <br/>
+                  <!-- 评论功能 -->
+                <div class="row">
+                    <div class="col-sm-12 ">
+                        <h4>
+                            <%= @product.reviews.count %> 个评论
+                    </h4>
+                        <hr>
+                        <div >
+                            <%= render @product.reviews%>
+                            <%= render "reviews/form"%>
+                        </div>
+
+                    </div>
+                </div>
                 <style>
                     .panel.with-nav-tabs .panel-heading{
                                                         padding: 5px 5px 0 5px;
