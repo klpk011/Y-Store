@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>A thinking reed</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <div class="container-fluid">
-    <%= render "common/navbar" %>
-    <%= render "common/flashes" %>
-    <%= yield %>
-  </div>
-  <%= render "common/footer" %>
-  </body>
+    <head>
+        <title>A thinking reed</title>
+        <%= csrf_meta_tags %>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+    <body>
+        <div class="content">
+            <div class="container-fluid">
+                <%= render "common/navbar" %>
+                <%= render "common/flashes" %>
+                <%= yield %>
+            </div>
+        </div>
+        <%= render "common/footer" %>
+    </body>
 </html>
