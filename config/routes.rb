@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   namespace :admin do
-    resources :products
+    resources :products do
+      member do
+       post :reorder
+      end
+    end
   end
 
   resources :products do
