@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(version: 20170526130424) do
     t.string   "class_location"
     t.text     "service"
     t.integer  "row_order"
-    t.index [nil], name: "index_products_on_row_orderend"
+    t.index ["row_order"], name: "index_products_on_row_order"
   end
 
   create_table "reviews", force: :cascade do |t|
