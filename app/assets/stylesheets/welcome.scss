@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.content {
+  margin-right: 24.047;
+  margin-left: 24.047;
+}
+
 .block-1 {
   background-image: url(//ooo.0o0.ooo/2017/05/26/5927c89c20205.jpg);
   background-size: cover;
@@ -98,7 +103,8 @@
     margin-top: 60px;
     margin-bottom: 60px;
   }
-  p{
+
+  p {
     max-width: 150px;
     margin: 0 auto;
   }
@@ -107,14 +113,22 @@
 .block-5 {
   background-image: url("think.jpg");
   background-size: cover;
+}
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #777777;
+    background-color: #fff;
+}
 
   .btn-info {
     color: #777777;
     background-color: #fcf8e3;
     border-color: #fcf8e3;
   }
-}
+
 
 footer {
-  margin-top: 0px;
+  margin-top: 0;
 }
