@@ -59,7 +59,6 @@
 }
 
 .block-3 {
-  background-image: url(".jpg");
   padding-bottom: 200px;
   background-position: 40% 80%;
   color: #777;
@@ -80,7 +79,6 @@
 }
 
 .block-4 {
-  background-image: url(".jpg");
   padding-bottom: 20px;
   background-position: 50% 50%;
 
@@ -89,6 +87,7 @@
     box-shadow: none;
     border: none;
   }
+
   img {
     width: 200px;
     height: auto;
@@ -100,11 +99,11 @@
 
 .block-5 {
   background-image: url("think.jpg");
+  background-size: cover;
 
   .btn-info {
     color: #777777;
     background-color: #fcf8e3;
     border-color: #fcf8e3;
-
-}
+  }
 }
