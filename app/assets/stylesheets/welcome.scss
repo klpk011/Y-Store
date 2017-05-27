@@ -8,31 +8,37 @@
 }
 
 .block-1 {
-  background-image: url(//ooo.0o0.ooo/2017/05/26/59284347311e6.jpg);
+
+  background-image: url(//ooo.0o0.ooo/2017/05/27/592980b6819da.jpg);
   background-size: cover;
-  background-position: 20% 3%;
+  background-position: 20% 20%;
+
   height: 800px;
 
 
   h1 {
-    color: #777;
-    margin: 100px auto 20px;
-    font-size: 38px;
+    color: #333;
+    margin: 200px auto 20px;
+    font-size: 55px;
   }
 
   p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-size: 30px;
     line-height: 1.6;
-    color: #777;
-    margin: 20px 0 60px;
+    color: #333;
+
+    margin-top: 30px;
+    margin-right: 0px;
+    margin-bottom: 60px;
+    margin-left: 0px;
   }
 
   .btn-learn {
-    background-color: #ebff44;
-    border: 1px solid #ebff44;
+    background-color: #f7fcfc;
+    border: 1px solid #f7fcfc;
     font-size: 18px;
-    color: #777777;
+    color: #0ab8c3;
     padding: 10px 45px;
     font-weight: bolder;
   }
@@ -98,7 +104,7 @@
   }
 
   img {
-    width: 70px;
+    width: 150px;
     height: auto;
     border-radius: 10px;
     margin-top: 60px;
@@ -112,8 +118,13 @@
 }
 
 .block-5 {
-  background-image: url(//ooo.0o0.ooo/2017/05/26/592843bc05742.jpg);
+
+  background-image: url(//ooo.0o0.ooo/2017/05/27/592981cacd1cf.jpg);
+
+
   background-size: cover;
+
+
 }
   body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -125,8 +136,9 @@
 
   .btn-info {
     color: #777777;
-    background-color: #fcf8e3;
-    border-color: #fcf8e3;
+    background-color: #f7fcfc;
+    border-color: #f7fcfc;
+    padding: 10px 45px;
   }
 
 
