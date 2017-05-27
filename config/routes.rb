@@ -3,10 +3,15 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   namespace :admin do
-    resources :products
+    resources :products do
+      member do
+       post :reorder
+      end
+    end
   end
 
   resources :products do
+    resources :reviews
     member do
       post :add_to_cart
     end
@@ -21,7 +26,13 @@ Rails.application.routes.draw do
 
   resources :cart_items
 
-  resources :orders
+  resources :orders do
+    member do
+      post :pay_with_alipay
+      post :pay_with_wechat
+    end
+
+  end
 
   namespace :account do
     resources :orders

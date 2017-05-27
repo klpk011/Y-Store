@@ -14,7 +14,7 @@
                     <th>description</th>
                     <th width="50">Quantity</th>
                     <th width="50">Price</th>
-                    <th width="120"> Options</th>
+                    <th width="150"> Options</th>
                 </tr>
             </thead>
             <tbody>
@@ -45,6 +45,12 @@
                             <%= product.price %>
                         </td>
                         <td>
+                            <%= link_to "上移", reorder_admin_product_path(product, :position => :up), :method => :post, :class => "btn btn-default" %>
+                            <%= link_to "下移", reorder_admin_product_path(product, :position => :down), :method => :post, :class => "btn btn-default" %>
+</br>
+                            <%= link_to "置顶", reorder_admin_product_path(product, :position => :first), :method => :post, :class => "btn btn-default" %>
+                            <%= link_to "置底", reorder_admin_product_path(product, :position => :last), :method => :post, :class => "btn btn-default" %>
+                            <hr>
                             <%= link_to("Edit", edit_admin_product_path(product)) %>
                             |
                         <%= link_to("Destroy", admin_product_path(product), method: :delete, data: { :confirm => "Are you sure?"}) %>
