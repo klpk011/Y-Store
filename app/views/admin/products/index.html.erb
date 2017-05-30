@@ -10,11 +10,12 @@
                 <tr>
                     <th>#</th>
                     <th width="220">Product Pic</th>
-                    <th>Name</th>
-                    <th>description</th>
-                    <th width="50">Quantity</th>
-                    <th width="50">Price</th>
-                    <th width="150"> Options</th>
+                    <th>课程名称</th>
+                    <th>课程类型</th>
+                    <th>课程分类</th>
+                    <th width="50">课程数量</th>
+                    <th width="50">课程价格</th>
+                    <th width="150">操作选项</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,8 +37,11 @@
                             <%= product.name %>
                         </td>
                         <td>
-                            <%= product.description %>
+                            <%= product.category.category_group.try(:name) %>
                         </td>
+                      <td>
+                      <%= product.category.try(:name) %>
+                      </td>
                         <td>
                             <%= product.quantity %>
                         </td>
@@ -47,17 +51,17 @@
                         <td>
                             <%= link_to "上移", reorder_admin_product_path(product, :position => :up), :method => :post, :class => "btn btn-default" %>
                             <%= link_to "下移", reorder_admin_product_path(product, :position => :down), :method => :post, :class => "btn btn-default" %>
-</br>
-                            <%= link_to "置顶", reorder_admin_product_path(product, :position => :first), :method => :post, :class => "btn btn-default" %>
-                            <%= link_to "置底", reorder_admin_product_path(product, :position => :last), :method => :post, :class => "btn btn-default" %>
-                            <hr>
-                            <%= link_to("Edit", edit_admin_product_path(product)) %>
-                            |
+                        </br>
+                        <%= link_to "置顶", reorder_admin_product_path(product, :position => :first), :method => :post, :class => "btn btn-default" %>
+                        <%= link_to "置底", reorder_admin_product_path(product, :position => :last), :method => :post, :class => "btn btn-default" %>
+                        <hr>
+                        <%= link_to("Edit", edit_admin_product_path(product)) %>
+                        |
                         <%= link_to("Destroy", admin_product_path(product), method: :delete, data: { :confirm => "Are you sure?"}) %>
-                        </td>
-                    </tr>
-                <% end %>
-            </tbody>
-        </table>
-    </div>
+                    </td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>
 </div>
