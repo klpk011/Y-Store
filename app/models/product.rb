@@ -8,6 +8,8 @@ class Product < ApplicationRecord
   validates :price, numericality: { greater_than: 0, message: "请输入课程价格，必須大于0" }
   validates :quantity, presence: { message: "請入课程席位数" }, numericality: { greater_than_or_equal: 0 }
 
+  belongs_to :category
+
 #排序功能 #
    include RankedModel
    ranks :row_order
