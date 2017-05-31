@@ -8,6 +8,22 @@ Rails.application.routes.draw do
         post :reorder
       end
     end
+
+    # 一级分类 #
+    resources :category_groups do
+      member do
+        post :publish
+        post :hide
+      end
+    end
+    # 二级分类 #
+    resources :categories do
+       member do
+         post :publish
+         post :hide
+       end
+     end
+
   end
 
   resources :products do
@@ -40,4 +56,5 @@ Rails.application.routes.draw do
   namespace :account do
     resources :orders
   end
-end
+
+end  
