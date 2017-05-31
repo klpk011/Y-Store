@@ -1,3 +1,31 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// 去掉导航栏四边的圆角
+.navbar {
+    border-radius: 0; //圆角为0
+    position     : relative;
+    min-height   : 30px;
+    margin-bottom: 0;
+    border       : 0 solid transparent;
+}
+/*===== Logo ======*/
+.logo-box {
+    margin-right: 15px;
+    font-family: 'Oswald', sans-serif; /* Google字型 */
+    font-size: 20px;
+
+    img {
+      display: inline-block;
+      margin-top: -6px;
+      margin-right: 8px;
+      margin-left: 30px;
+      width: 32px;
+      height: 32px;
+      border: 2px solid #ffffff; /* Logo 外框 */
+      border-radius: 25px; /* Logo 切成圆形 */
+    }
+  }
+
+  
