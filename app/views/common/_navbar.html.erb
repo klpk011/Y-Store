@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-inverse" role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -8,9 +8,21 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="active">
-                    <%= link_to("Products", products_path) %>
+                    <%= link_to("发现课程", products_path) %>
                 </li>
             </ul>
+            <!-- 搜索栏 -->
+            <%= form_tag search_products_path, :method => :get, class: "navbar-form pull-left" do %>
+                <div class="input-group search-box">
+                    <input type="text" class="form-control" name="keyword" placeholder="搜索课程" value="<%= params[:keyword] %>">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                          <span><i class="glyphicon glyphicon-search"></i></span>
+                        </button>
+                    </div>
+                </div>
+            <% end %>
+
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <%= link_to carts_path do  %>

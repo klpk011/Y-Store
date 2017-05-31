@@ -1,0 +1,24 @@
+<div >
+  <br>
+  <% if @products.blank? %>
+  <br>
+  <h2 class="search-info-name">亲，没有搜索到课程哦，要不换个关键词试试？</h2>
+  <% else %>
+  <h2 class="search-info-name">有关“<%= @query_string %>”的课程信息</h2>
+  <div class="search_result">
+    <div class="row product-show0"></div>
+      <div class="product-table">
+        <% @products.each do |product| %>
+        <div class="row products-show">
+          <div class="col-md-12 col-lg-9 col-lg-offset-1">
+            <h3><%= link_to(render_highlight_content(product, @query_string),product_path(product)) %></h3>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="text-center">
+      <%= will_paginate(@products, renderer: BootstrapPagination::Rails) %>
+    </div>
+  <% end %>
+</div>
