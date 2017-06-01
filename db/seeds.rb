@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
+User.create(email: "admin@gmail.com", password: "123456", password_confirmation: "123456", is_admin: true)
 
 # 新增類型  Category #
   CategoryGroup.create!(
@@ -208,5 +208,127 @@ Product.create!(
  ',
       class_location: '在线--一块儿听听
  ',
-      service: ' '
+      service: '课后答疑
+ '
+)
+
+Product.create!(
+      name: '编程英语 ',
+      description: '让你再也不用因为英语拦路而学不好编程。
+ ',
+      category_id: 4,
+      Applicants: '想要学编程，但是英语0基础的“预备程序员”
+ ',
+      teaching_objectives: '1、让你记住编程所需要了解的200个常用单词。
+2、夯实语法基础，看懂报错内容，再也部位红色警报而担忧。
+3、可以自由google遇到的问题病看懂解答。
+ ',
+      Course_Contents: '1、200个最常用的编程英文单词
+2、500个构成句子的其他常用英文单词
+3、看懂编程英语语法 ',
+      course_features: '刷新你对语言的认识。
+ ',
+      curriculum: 3,
+      Teacher_introduction: 'Claire
+1、专注心理学知识和英语教学的结合5年，将最前沿的心理学成果融入教学，有自己独特的教学理念；
+2、发音地道，英文水平高，但那都不算什么，那是最基本的条件；
+3、最重要的是：Claire老师最擅长激发学生的学习兴趣。
+4、跟她学，你很有可能会爱上英文的，因为她已经促成很多这样的奇妙反应。^_^ ',
+      price: 50,
+      quantity: 999,
+      class_schedule: '2017.7.10-2017.7.31 ',
+      class_location: '在线--一块儿听听
+ ',
+      service: '课后答疑
+ '
+)
+
+Product.create!(
+      name: '美国旅行英语口语
+ ',
+      description: '给你的美国之行增添“谈”资，让你更加享受你的旅行。
+ ',
+      category_id: 5,
+      Applicants: '1、一个月后要去美国旅行的同学
+2、害怕英语影响旅行感觉的同学 ',
+      teaching_objectives: '让你会说旅行中最需要用到的话 ',
+      Course_Contents: '美国旅行英语口语
+ ',
+      course_features: '让你觉得“我好厉害，我的英文这样棒”。
+ ',
+      curriculum: 30,
+      Teacher_introduction: 'Claire
+1、专注心理学知识和英语教学的结合5年，将最前沿的心理学成果融入教学，有自己独特的教学理念；
+2、发音地道，英文水平高，但那都不算什么，那是最基本的条件；
+3、最重要的是：Claire老师最擅长激发学生的学习兴趣。
+4、跟她学，你很有可能会爱上英文的，因为她已经促成很多这样的奇妙反应。^_^ ',
+      price: 100,
+      quantity: 999,
+      class_schedule: '2017.8.1 循环开课
+ ',
+      class_location: '在线--一块儿听听
+ ',
+      service: '课后答疑
+ '
+)
+
+Product.create!(
+      name: '英国旅行英语口语 ',
+      description: '给你的美国之行增添“谈”资，让你更加享受你的旅行。
+ ',
+      category_id: 5,
+      Applicants: '1、一个月后要去英国旅行的同学
+2、不想让英语影响旅行感觉的同学 ',
+      teaching_objectives: '让你会说旅行中最需要用到的话
+ ',
+      Course_Contents: '让你会说旅行中最需要用到的话
+ ',
+      course_features: '让你觉得“我好厉害，我的英文这样棒”。
+ ',
+      curriculum: 30,
+      Teacher_introduction: 'Claire
+1、专注心理学知识和英语教学的结合5年，将最前沿的心理学成果融入教学，有自己独特的教学理念；
+2、发音地道，英文水平高，但那都不算什么，那是最基本的条件；
+3、最重要的是：Claire老师最擅长激发学生的学习兴趣。
+4、跟她学，你很有可能会爱上英文的，因为她已经促成很多这样的奇妙反应。^_^ ',
+      price: 100,
+      quantity: 999,
+      class_schedule: '2017.8.1 循环开课
+ ',
+      class_location: '在线--一块儿听听
+ ',
+      service: '课后答疑
+ '
+)
+
+Product.create!(
+      name: '英语商务信件阅读
+ ',
+      description: '让你读懂商务邮件
+ ',
+      category_id: 6,
+      Applicants: '1、英文薄弱，但是需要大量阅读英文商务邮件的职场人士
+2、因为英语不敢申请外企的其他技能优秀的你
+ ',
+      teaching_objectives: '让你练会英文
+ ',
+      Course_Contents: '1、语法分析
+2、分类邮件内容分析
+3、老外暗含意思解析 ',
+      course_features: '让你再也不怕读英文邮件
+ ',
+      curriculum: 30,
+      Teacher_introduction: 'Claire
+1、专注心理学知识和英语教学的结合5年，将最前沿的心理学成果融入教学，有自己独特的教学理念；
+2、发音地道，英文水平高，但那都不算什么，那是最基本的条件；
+3、最重要的是：Claire老师最擅长激发学生的学习兴趣。
+4、跟她学，你很有可能会爱上英文的，因为她已经促成很多这样的奇妙反应。^_^ ',
+      price: 200,
+      quantity: 799,
+      class_schedule: '2017.9.1-9.30
+ ',
+      class_location: '在线--一块儿听听
+ ',
+      service: '课后答疑
+ '
 )
