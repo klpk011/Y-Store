@@ -30,7 +30,9 @@ end
 
   def update
     @product = Product.find(params[:id])
-
+    # 课程所属的分类
+      @categories = Category.all.map { |c| [c.name, c.id] }
+      @product.category_id = params[:category_id]
     if @product.update(product_params)
       redirect_to admin_products_path
     else

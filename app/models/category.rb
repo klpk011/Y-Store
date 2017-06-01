@@ -1,6 +1,5 @@
 class Category < ApplicationRecord
-  validates :name, presence: true
-  mount_uploader :image, GroupUploader
+  validates :name, presence: { message: "请输入分类名称" }
   validates :category_group_id, presence: { message: "请选择分类类型" }
 
   # 分类的关联条件 #
@@ -18,4 +17,6 @@ class Category < ApplicationRecord
      self.save
    end
 
+   # Scope #
+    scope :published, -> { where(is_hidden: false) }
 end
