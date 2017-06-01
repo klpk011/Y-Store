@@ -14,4 +14,7 @@ class CategoryGroup < ApplicationRecord
      self.is_hidden = true
      self.save
    end
+
+   # Scope #
+ scope :published, -> { where(is_hidden: false) }
 end

@@ -42,15 +42,6 @@ ActiveRecord::Schema.define(version: 20170529040600) do
     t.datetime "updated_at",                  null: false
   end
 
-  create_table "likes", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "product_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["product_id"], name: "index_likes_on_product_id"
-    t.index ["user_id"], name: "index_likes_on_user_id"
-  end
-
   create_table "orders", force: :cascade do |t|
     t.integer  "total",            default: 0
     t.integer  "user_id"
