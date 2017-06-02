@@ -1,0 +1,21 @@
+<% if @category_group.new_record? %>
+<% else %>
+    <% if @category_group.image.present? %>
+        <span>目前使用的类型图片</span> <br>
+        <%= image_tag(@category_group.image.url) %>
+    <% end %>
+<% end %>
+<%= simple_form_for [:admin, @category_group] do |f| %>
+
+<div class="group">
+  <%= f.input :name, :lable => '类型名称' %>
+</div>
+<div class="group">
+    <%= f.input :description, :lable => "类型描述", placeholder: "请输入课程简介"%>
+</div>
+<div class="group">
+    <%= f.input :image, as: :file, :lable => "类型图片" %>
+</div>
+<%= f.input :is_hidden, :label => "打勾隐藏分类" %>
+  <%= f.submit "确认送出", data: { disable_with: "Submitting..." } %>
+<% end %>

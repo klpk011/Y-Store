@@ -1,0 +1,7 @@
+<%= simple_form_for [:admin, @category] do |f| %>
+<%= f.input :category_group_id, :label => "课程所属类型", :collection => @category_groups, input_html: { class: 'width-50' } %>
+<div class="group">
+  <%= f.input :name, :lable => '分类名称' %>
+  <%= f.input :is_hidden, :label => "打勾隐藏分类" %>
+  <%= f.submit "确认送出", data: { disable_with: "Submitting..." } %>
+<% end %>

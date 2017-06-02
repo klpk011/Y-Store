@@ -1,14 +1,16 @@
 class Admin::ProductsController < ApplicationController
-  layout "admin"
+  layout 'admin'
 
   before_action :authenticate_user!
   before_action :admin_required
   def index
-    @products = Product.all
+    @products = Product.rank(:row_order).all
+    @categories = Category.all.map { |c| [c.name, c.id] }
   end
 
   def new
     @product = Product.new
+    @categories = Category.all.order("category_group_id, name")
     end
 
   def create
@@ -23,11 +25,14 @@ class Admin::ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
+    @categories = Category.all.order("category_group_id, name")
 end
 
   def update
     @product = Product.find(params[:id])
-
+    # 课程所属的分类
+      @categories = Category.all.map { |c| [c.name, c.id] }
+      @product.category_id = params[:category_id]
     if @product.update(product_params)
       redirect_to admin_products_path
     else
@@ -42,9 +47,17 @@ end
     redirect_to admin_products_path
    end
 
+  def reorder
+    @product = Product.find(params[:id])
+    @product.row_order_position = params[:position]
+    @product.save!
+
+    redirect_to admin_products_path
+  end
+
   private
 
   def product_params
-    params.require(:product).permit(:name, :description, :quantity, :price, :image, :Applicants, :teaching_objectives, :Course_Contents, :course_features, :curriculum, :Teacher_introduction , :class_schedule, :class_location, :service)
+    params.require(:product).permit(:name, :description, :quantity, :price, :image, :Applicants, :teaching_objectives, :Course_Contents, :course_features, :curriculum, :Teacher_introduction, :class_schedule, :class_location, :service, :category_id)
   end
 end
