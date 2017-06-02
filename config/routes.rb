@@ -34,6 +34,7 @@ Rails.application.routes.draw do
     end
     member do
       post :add_to_cart
+      post :operations
     end
   end
 
@@ -57,4 +58,4 @@ Rails.application.routes.draw do
     resources :orders
   end
 
-end  
+end
