@@ -1,7 +1,5 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 
+// 首页内容
 .content {
   margin-right: 24.047;
   margin-left: 24.047;
@@ -9,10 +7,9 @@
 
 .block-1 {
 
-  background-image: url(//ooo.0o0.ooo/2017/05/27/592980b6819da.jpg);
+  background-image: url(//ooo.0o0.ooo/2017/05/30/592d3aa460ab6.png);
   background-size: cover;
   background-position: 20% 20%;
-
   height: 800px;
 
 
@@ -35,18 +32,20 @@
   }
 
   .btn-learn {
-    background-color: #f7fcfc;
-    border: 1px solid #f7fcfc;
-    font-size: 18px;
-    color: #0ab8c3;
+    background-color: #f44336;
+    border: 1px solid #ea1717;
+    font-size: 20px;
+    color: #f7fcfc;
     padding: 10px 45px;
     font-weight: bolder;
+    margin-top: 40px;
   }
 }
 
 .block-2 {
   padding-bottom: 50px;
-  background-color: #F7FCFC;
+  background-color: E0E0E0;
+  font-size: 19px;
 
   .h1,
   .h2,
@@ -54,20 +53,32 @@
   h1,
   h2,
   h3 {
-    margin-top: 20px;
+    padding-left: 120px;
+    padding-right: 10px;
+    margin-top: 150px;
     margin-bottom: 30px;
+    border: 0px;
     color: #777;
   }
+  p{
+    padding-left: 120px;
+    padding-right: 10px;
+  }
+
 
   body {
     color: #777777;
   }
-
-  img {
-    width: 240px;
-    height: auto;
-    border-radius: 10px;
+  img{
+  border-radius: 80px;
   }
+  //img {
+  //   margin-left: 70px;
+  //   width: 100px;
+  //   height: auto;
+  //   border-radius: 10px;
+  //   border: 0px;
+  // }
 }
 
 .block-3 {
@@ -80,6 +91,10 @@
     box-shadow: none;
     border: none;
     background-color: #f5f5f5;
+  }
+
+  h4, .h4 {
+      font-size: 25px;
   }
 
   img {
@@ -104,7 +119,7 @@
   }
 
   img {
-    width: 150px;
+    width: 200px;
     height: auto;
     border-radius: 10px;
     margin-top: 60px;
@@ -118,14 +133,10 @@
 }
 
 .block-5 {
-
-  background-image: url(//ooo.0o0.ooo/2017/05/27/592981cacd1cf.jpg);
-
-
+  background-image: url(//ooo.0o0.ooo/2017/05/30/592d3aa460ab6.png);
   background-size: cover;
-
-
 }
+
   body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
@@ -135,9 +146,9 @@
 }
 
   .btn-info {
-    color: #777777;
-    background-color: #f7fcfc;
-    border-color: #f7fcfc;
+    color: #f7fcfc;
+    background-color: #f44336;
+    border-color: #ea1717;
     padding: 10px 45px;
   }
 
