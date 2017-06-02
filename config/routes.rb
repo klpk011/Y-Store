@@ -76,8 +76,5 @@ Rails.application.routes.draw do
     # 订单记录 #
     resources :orders
   end
- cart
-
-
 
 end
