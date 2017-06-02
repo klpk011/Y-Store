@@ -46,7 +46,9 @@ Rails.application.routes.draw do
     # 添加到购物车 #
     member do
       post :add_to_cart
-      post :operations
+      # 点赞 #
+      put "like", to: "products#upvote"
+
     end
   end
 

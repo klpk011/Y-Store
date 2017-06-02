@@ -12,7 +12,9 @@ class Product < ApplicationRecord
 # 分类关联 #
   belongs_to :category
 
-#排序功能 #
+# 排序功能 #
    include RankedModel
    ranks :row_order
+# 点赞功能 #
+   acts_as_votable
 end
