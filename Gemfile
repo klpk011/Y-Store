@@ -71,6 +71,9 @@ gem 'ransack'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 
+# 订单切换状态
+gem 'aasm'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   # Debug 工具
