@@ -19,10 +19,7 @@
                 <div class="product-price"> ￥ <%= @product.price %> </div>
                 <div class="pull-right">
                     <% if @product.quantity.present? && @product.quantity > 0 %>
-                    <!-- 去除购物的链接 -->
-                        <!-- <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %> -->
-                        <%= link_to("开始学习",  checkout_carts_path, method: :post, class: "btn btn-lg btn-danger pull-right") %>
-
+                        <%= link_to("开始学习",  add_to_cart_product_path(@product), method: :post, class: "btn btn-lg btn-danger pull-right")%>
                     <% else %>
                         课程已销售一空，无法购买
                        <% end %>

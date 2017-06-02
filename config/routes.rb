@@ -46,6 +46,7 @@ Rails.application.routes.draw do
     # 添加到购物车 #
     member do
       post :add_to_cart
+      post :operations
     end
   end
 
@@ -75,4 +76,8 @@ Rails.application.routes.draw do
     # 订单记录 #
     resources :orders
   end
+ cart
+
+
+
 end
