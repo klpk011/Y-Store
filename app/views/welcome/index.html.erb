@@ -18,8 +18,7 @@
       </div>
 
       <div class="col-sm-6 ">
-        <img src='<%= image_url 'br.jpg' %>'>
-
+        <%= image_tag("br.jpg", class: "img-responsive") %>
       </div>
    </div>
 </div>
@@ -29,33 +28,37 @@
   <h4>只要你想交流</h4>
 
   <div class="row">
-    <div class="col-sm-4 well">
-      <img src='<%= image_url 'clock.jpg' %>'>
+    <div class="col-sm-4">
+      <div class="well feature">
+        <img src='<%= image_url 'clock.jpg' %>'>
 
-      <h3>每课10分钟，无限重听</h3>
-      <p>“学好英语=听老师讲很多？”No！”</p>
-      <p>不是每次“听老师讲了很多”，而是“每次都让自己学到新东西”。“Yes！”
-      </p>
-      <p>每次盯准一个目标。Run！</p>
+        <h3>每课10分钟，无限重听</h3>
+        <p>“学好英语=听老师讲很多？”No！”</p>
+        <p>不是每次“听老师讲了很多”，而是“每次都让自己学到新东西”。“Yes！”
+        </p>
+        <p>每次盯准一个目标。Run！</p>
+      </div>
     </div>
-    <div class="col-sm-4 well">
-      <img src='<%= image_url 'golden.jpg' %>'>
+    <div class="col-sm-4 ">
+      <div class="well feature">
+        <img src='<%= image_url 'golden.jpg' %>'>
 
-      <h3>每课100分，完美自己的人生</h3>
+        <h3>每课100分，完美自己的人生</h3>
 
-      <p>优化练习，节省时间。</p>
-      <p>我们不认为60分是及格。</p>
-      <p>我们认为100分才是掌握。</p>
-
+        <p>优化练习，节省时间。</p>
+        <p>我们不认为60分是及格。</p>
+        <p>我们认为100分才是掌握。</p>
+      </div>
     </div>
-    <div class="col-sm-4 well">
-      <img src='<%= image_url 'rocket.jpg' %>'>
+    <div class="col-sm-4 ">
+      <div class="well feature">
+        <img src='<%= image_url 'rocket.jpg' %>'>
 
-      <h3>冲破牢笼，飞向天际</h3>
-      <p>学好英语最大的障碍是没有练习。</p>
-      <p>我们配备了专业助教，随时随地给你指导。</p>
-      <p>我们开设了一系列专题社群，带你练习带你飞.
-      </p>
+        <h3>冲破牢笼，飞向天际</h3>
+        <p>学好英语最大的障碍是没有练习。</p>
+        <p>我们配备了专业助教，随时随地给你指导。</p>
+        <p>我们开设了一系列专题社群，带你练习带你飞.  </p>
+      </div>
     </div>
   </div>
 </div>
@@ -91,23 +94,5 @@
 
 <!--===== 开始学习 =====-->
 <div class="well block-5 text-center">
-  <%= link_to "实现梦想", products_path, class: "btn btn-info btn-lg" %>
+  <%= link_to "实现梦想", products_path, class: "btn btn-raised btn-danger btn-lg" %>
 </div>
-
-<!-- Script to Activate the Carousel -->
-<script>
-  $('.carousel').carousel({
-    interval: 5000 //changes the speed
-  })
-
-  $('#bootstrap-touch-slider').bsTouchSlider();
-</script>
-
-<script>
-  $(document).ready(function () {
-    $('.material-button-toggle').click(function () {
-      $(this).toggleClass('open');
-      $('.option').toggleClass('scale-on');
-    });
-  });
-</script>
