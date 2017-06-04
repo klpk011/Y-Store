@@ -1,6 +1,50 @@
 <div class="container">
 <div class="row">
-  
+
+
+  <!-- <% @category_groups.each do |category_group| %>
+    <div class='dropdown btn-group clearfix'>
+      <button class='btn dropdown-toggle' type='button' data-toggle='dropdown'>
+        <%= category_group.name %> <i class="fa fa-angle-down"></i>
+      </button>
+
+
+      <ul class='dropdown-menu'>
+        <% category_group.categories.each do |category| %>
+          <li>
+            <%= link_to(category.name, products_path(:category => category.name)) %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %> -->
+
+  <!--=== 产品页面路径 ===-->
+  <div class="left-box">
+    <%= link_to products_path do %>
+      <%= (t('j-and-a-select')) %>
+    <% end %>
+
+    <% if params[:id].present? %>
+    / <a href="../products?group=<%= @product.category.category_group.name %>"><%= @product.category.category_group.name %></a> / <a href="../products?category=<%= @product.category.name %>"><%= @product.category.name %></a> / <a href="<%= @product.id %>"><%= @product.name %></a>
+    <% elsif params[:category].present? %>
+    / <a href="products?group=<%= @category.category_group.name %>"><%= @category.category_group.name %></a> / <a href="products?category=<%= @category.name %>"><%= @category.name %></a>
+    <% elsif params[:group].present? %>
+    / <a href="products?group=<%= @group.name %>"><%= @group.name %></a>
+
+    <% end %>
+  </div>
+
+
+
+  <ul class="dropdown-menu" role="menu">
+      <% CategoryGroup.all.each do |category_group| %>
+          <li>
+              <%= link_to category_group.name, products_path(category_group: category_group.name), class: "link" %>
+          </li>
+      <% end %>
+  </ul>
+
   <% @products.each do |product| %>
     <div class="col-xs-6 col-md-3">
       <%= link_to product_path(product) do %>
