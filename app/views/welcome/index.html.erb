@@ -1,3 +1,4 @@
+
 <div class="well block-1 text-center">
   <h1>用英语,实现你被它耽误的梦想</h1>
   <p>人人都能用英语，你跟你的梦想之间就差这一步。</p>
@@ -101,3 +102,29 @@
 <div class="well block-5 text-center">
   <%= link_to "实现梦想", products_path, class: "btn btn-raised btn-danger btn-lg" %>
 </div>
+
+
+<!-- Script to Activate the Carousel -->
+<script>
+  $('.carousel').carousel({
+    interval: 5000 //changes the speed
+  })
+
+  $('#bootstrap-touch-slider').bsTouchSlider();
+</script>
+
+<script>
+  $(document).ready(function () {
+    $('.material-button-toggle').click(function () {
+      $(this).toggleClass('open');
+      $('.option').toggleClass('scale-on');
+    });
+  });
+</script>
+
+    <!--===== Go top（回到顶端） =====-->
+    <div class="goTop">
+        <span class="fa fa-chevron-up"></span>
+    </div>
+</div>
+

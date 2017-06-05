@@ -1,0 +1,11 @@
+<h1> <%= @category.name %> </h1>
+
+<!-- 所属主类别 -->
+<h3>课程类别</h3>
+<%= @category.category_group.name %>
+
+<!-- 该课程类别下的所有课程-->
+<h3>课程分类下的课程</h3>
+<% @category.products.each do |product| %>
+  <li><%= link_to(product.name, admin_products_path) %></li>
+<% end %>
