@@ -101,8 +101,8 @@ User.create(email: "admin@gmail.com", password: "123456", password_confirmation:
 3、最重要的是：Claire老师最擅长激发学生的学习兴趣。
 4、跟她学，你很有可能会爱上英文的，因为她已经促成很多这样的奇妙反应。^_^
  ',
-        price: 1000,
-        quantity: 599,
+        quantity: 1000,
+        price: 599,
         class_schedule: '2017.7.7-2017.7.21
 ',
         class_location: '在线--一块儿听听
@@ -134,8 +134,8 @@ User.create(email: "admin@gmail.com", password: "123456", password_confirmation:
 3、最重要的是：Claire老师最擅长激发学生的学习兴趣。
 4、跟她学，你很有可能会爱上英文的，因为她已经促成很多这样的奇妙反应。^_^
  ',
-        price: 200,
-        quantity: 799,
+        quantity: 200,
+        price: 799,
         class_schedule: '2017.7.23-2017-9.23
  ',
         class_location: '在线--一块儿听听
@@ -168,8 +168,8 @@ Product.create!(
 3、最重要的是：Claire老师最擅长激发学生的学习兴趣。
 4、跟她学，你很有可能会爱上英文的，因为她已经促成很多这样的奇妙反应。^_^
  ',
-      price: 200,
-      quantity: 799,
+      quantity: 200,
+      price: 799,
       class_schedule: '2017.9.23-2017-11.23
  ',
       class_location: '在线--一块儿听听
@@ -202,8 +202,8 @@ Product.create!(
 3、最重要的是：Claire老师最擅长激发学生的学习兴趣。
 4、跟她学，你很有可能会爱上英文的，因为她已经促成很多这样的奇妙反应。^_^
  ',
-      price: 200,
-      quantity: 799,
+      quantity: 200,
+      price: 799,
       class_schedule: '2017.11.23-2018-1.23
  ',
       class_location: '在线--一块儿听听
@@ -234,8 +234,8 @@ Product.create!(
 2、发音地道，英文水平高，但那都不算什么，那是最基本的条件；
 3、最重要的是：Claire老师最擅长激发学生的学习兴趣。
 4、跟她学，你很有可能会爱上英文的，因为她已经促成很多这样的奇妙反应。^_^ ',
-      price: 50,
-      quantity: 999,
+      quantity: 50,
+      price: 999,
       class_schedule: '2017.7.10-2017.7.31 ',
       class_location: '在线--一块儿听听
  ',
@@ -262,8 +262,8 @@ Product.create!(
 2、发音地道，英文水平高，但那都不算什么，那是最基本的条件；
 3、最重要的是：Claire老师最擅长激发学生的学习兴趣。
 4、跟她学，你很有可能会爱上英文的，因为她已经促成很多这样的奇妙反应。^_^ ',
-      price: 100,
-      quantity: 999,
+      quantity: 100,
+      price: 999,
       class_schedule: '2017.8.1 循环开课
  ',
       class_location: '在线--一块儿听听
@@ -291,8 +291,8 @@ Product.create!(
 2、发音地道，英文水平高，但那都不算什么，那是最基本的条件；
 3、最重要的是：Claire老师最擅长激发学生的学习兴趣。
 4、跟她学，你很有可能会爱上英文的，因为她已经促成很多这样的奇妙反应。^_^ ',
-      price: 100,
-      quantity: 999,
+      quantity: 100,
+      price: 999,
       class_schedule: '2017.8.1 循环开课
  ',
       class_location: '在线--一块儿听听
@@ -323,8 +323,8 @@ Product.create!(
 2、发音地道，英文水平高，但那都不算什么，那是最基本的条件；
 3、最重要的是：Claire老师最擅长激发学生的学习兴趣。
 4、跟她学，你很有可能会爱上英文的，因为她已经促成很多这样的奇妙反应。^_^ ',
-      price: 200,
-      quantity: 799,
+      quantity: 200,
+      price: 799,
       class_schedule: '2017.9.1-9.30
  ',
       class_location: '在线--一块儿听听
