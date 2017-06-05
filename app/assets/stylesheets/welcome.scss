@@ -19,7 +19,9 @@
     color: #333;
     margin: 30px 0 60px;
   }
-
+  .btn:not(.btn-raised).btn-info, .input-group-btn .btn:not(.btn-raised).btn-info {
+    color: #f5f5f5;
+}
   .btn-learn {
     background-color: #f44336;
     border: 1px solid #ea1717;
