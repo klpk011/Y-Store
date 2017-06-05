@@ -3,7 +3,16 @@ class ProductsController < ApplicationController
   before_action :authenticate_user!, only: [:upvote]
 
   def index
-    @products = Product.rank(:row_order).all
+@products = case params[:order]
+when 'by_product_price'
+      Product.order('price DESC').paginate(:page => params[:page], :per_page => 12)
+when 'by_product_quantity'
+      Product.order('quantity DESC').paginate(:page => params[:page], :per_page => 12)
+when 'by_product_vodate'
+      Product.order('created_at DESC').paginate(:page => params[:page], :per_page => 12)
+    else
+      Product.rank(:row_order).paginate(:page => params[:page], :per_page => 12) #根据后台课程排序
+    end
   end
 
   def show
