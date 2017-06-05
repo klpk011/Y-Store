@@ -1,3 +1,69 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//排序
+.order-wrap {
+  width: 100%; /*铺满屏幕*/
+  font-size: 30px;
+  height: 40px; /*设置高度*/
+  line-height: 40px; /*设置行高，实现垂直居中，口诀「如果高度等于行高，那就实现了文本的垂直居中」*/
+  color: #717171; /*字体颜色*/
+  padding-left: 2%;
+  padding-top:3%;
+
+}
+
+.order-list {
+  float: left;
+  font-size: 18px;
+}
+
+.order-listItem {
+  float: left; /*li是block元素，我们知道block元素是会独占一行的，如果要让它们在一行，那就要加上float*/
+  font-size: 18px;
+  padding-left: 30px; /*左边加点空间*/
+  padding-right: 30px; /*右边加点空间*/
+}
+
+.list1 {
+    float: left;
+    padding-left: 25px;
+    display: inline;
+}
+
+.order-wrap a:hover {
+  color: #C81623; /*鼠标一上去的时候，字体变成红色*/
+}
+
+.order-wrap a {
+  color: #717171; /*文字的颜色*/
+  text-decoration: none; /*不要下划线*/
+}
+
+.pro-in{
+  padding-top:5%;
+
+}
+//产品图片向上浮动
+.products-box {
+  width: 200px;
+  padding: 15px;
+  margin: 20px auto;
+  background: #fff;
+  position: relative;
+  top: 0;
+  transition: all 0.4s; /*这句代码的意思是，当这个元素的某个属性发现变化时，不是立刻完成，而是慢慢地在400ms内完成，这样就实现了动画的效果*/
+  -webkit-transition:all 0.4s ease-in-out; /*让「谷歌浏览器」支持这个属性*/
+  -moz-transition:all 0.4s ease-in-out; /*让「火狐浏览器」支持这个属性*/
+  -o-transition:all 0.4s ease-in-out; /*让「safari」支持属性*/
+  -ms-transition:all 0.4s ease-in-out; /*让「IE浏览器」支持这个属性*/
+}
+
+.products-box img {
+  width: 200px;
+}
+
+.products-box:hover {
+  top: -5px; /*在400ms内，top的值从 0px 变化为 5px*/
+}

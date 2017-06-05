@@ -1,5 +1,7 @@
 <div class="container">
 <div class="row">
+  <%= render "products/menu" %>
+<div class="pro-in">
 
   <% @products.each do |product| %>
     <div class="col-xs-6 col-md-3">
@@ -16,18 +18,23 @@
     </div>
   </td>
 
-
+  <span class="price">￥ <%= product.price %></span>
       <%= link_to like_product_path(product), method: :put do %>
 
-<div class="pi-thumbs-up">
-  <span class="price">￥ <%= product.price %></span>
+<span class="pi-thumbs-up">
 <i class="fa fa-thumbs-up fa-2x" , style="color:#F25F5C;"></i>
-  <%= product.get_upvotes.size %>
-</div>
-    <% end %>
 
+  <%= product.get_upvotes.size %>
+</span>
+    <% end %>
 
     </div>
   <% end %>
+
+</div>
+</div>
+
+  <div class="text-center col-md-12 pagination">
+  <%= will_paginate @products, renderer: BootstrapPagination::Rails %>
 </div>
 </div>

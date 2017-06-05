@@ -91,5 +91,27 @@ html { height: 100%;}
 
 
 .price{
-    margin-right: 100px; // 价格和点赞人数之间有一定的间隔
+    margin-right: 40%; // 价格和点赞人数之间有一定的间隔
+  }
+
+
+  .pagination>li>a, .pagination>li>span {
+     border-radius: 50% !important;margin: 0 5px;
+     margin: 10px 0;
+}
+  .pagin{
+    background-color: rgba(121,134,203 ,0.2);
+  }
+
+  .page-box {
+    margin-top: 75px;
+
+    a {
+      background-color: #eee;
+    }
+
+    a:hover {
+      background-color: #ddd;
+      color: #666 !important;
+    }
   }

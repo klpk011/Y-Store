@@ -5,6 +5,15 @@
         <h2 class="search-info-name">亲，没有搜索到课程哦，要不换个关键词试试？</h2>
     <% else %>
         <h2 class="search-info-name">有关“<%= @query_string %>”的课程信息</h2>
+        <div class="order-wrap">
+           <!-- 课程排序 -->
+            <ul class="order-list">
+                <p class="list1" >课程排序：</p>
+                <ol  class="order-listItem"><a href="/products?order=by_product_quantit">销量<i class="fa fa-arrow-down" ></i></a></ol>
+                <ol  class="order-listItem"><a href="/products?order=by_product_price">价格<i class="fa fa-arrow-down" ></i></a></ol>
+                <ol  class="order-listItem"><a href="/products">上架时间</a></ol>
+            </ul>
+        </div>
         <div class="search_result">
             <div class="row product-show0"></div>
             <div class="product-table">
