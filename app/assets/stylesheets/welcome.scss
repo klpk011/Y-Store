@@ -1,18 +1,11 @@
-
 // 首页内容
-.content {
-  margin-right: 24.047;
-  margin-left: 24.047;
-  background: #FAF6EC; //所有页面的背景颜色
-}
 
 .block-1 {
+  background-image: url("//ooo.0o0.ooo/2017/05/30/592d3aa460ab6.png");
 
-  background-image: url(//ooo.0o0.ooo/2017/05/30/592d3aa460ab6.png);
   background-size: cover;
   background-position: 20% 20%;
   height: 800px;
-
 
   h1 {
     color: #333;
@@ -25,22 +18,32 @@
     font-size: 30px;
     line-height: 1.6;
     color: #333;
-
-    margin-top: 30px;
-    margin-right: 0px;
-    margin-bottom: 60px;
-    margin-left: 0px;
+    margin: 30px 0 60px;
   }
-
+  .btn:not(.btn-raised).btn-info, .input-group-btn .btn:not(.btn-raised).btn-info {
+    color: #f5f5f5;
+}
   .btn-learn {
     background-color: #f44336;
     border: 1px solid #ea1717;
     font-size: 20px;
-    color: #f7fcfc;
+    color: #f5f5f5;
     padding: 10px 45px;
     font-weight: bolder;
     margin-top: 40px;
   }
+}
+
+.main-raised {
+  margin: -60px 30px 0;
+  border-radius: 6px;
+  box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2);
+}
+
+.navbar,
+.navbar.navbar-default {
+  background-color: #000 !important;
+  margin: 0;
 }
 
 .block-2 {
@@ -58,22 +61,24 @@
     padding-right: 10px;
     margin-top: 150px;
     margin-bottom: 30px;
-    border: 0px;
+    border: 0;
     color: #777;
   }
-  p{
+
+  p {
     padding-left: 120px;
     padding-right: 10px;
   }
 
-
   body {
     color: #777777;
   }
-  img{
-  border-radius: 80px;
+
+  img {
+    border-radius: 80px;
+    width: 500px;
   }
-  //img {
+  // img {
   //   margin-left: 70px;
   //   width: 100px;
   //   height: auto;
@@ -94,8 +99,9 @@
     background-color: #f5f5f5;
   }
 
-  h4, .h4 {
-      font-size: 25px;
+  .h4,
+  h4 {
+    font-size: 25px;
   }
 
   img {
@@ -134,25 +140,32 @@
 }
 
 .block-5 {
-  background-image: url(//ooo.0o0.ooo/2017/05/30/592d3aa460ab6.png);
+  background-image: url("//ooo.0o0.ooo/2017/05/30/592d3aa460ab6.png");
   background-size: cover;
 }
 
-  body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.42857143;
-    color: #777777;
-    background-color: #fff;
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: #777777;
+  background-color: #fff;
 }
 
-  .btn-info {
-    color: #f7fcfc;
-    background-color: #f44336;
-    border-color: #ea1717;
-    padding: 10px 45px;
-  }
+.feature {
+  height: 600px;
+  margin: 10px;
 
+}
+
+img {
+  width:200px;
+  height:132px;
+}
+
+body .container-fluid .well {
+  margin-bottom: 0;
+}
 
 footer {
   margin-top: 0;

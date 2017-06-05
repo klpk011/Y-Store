@@ -16,6 +16,7 @@
 //= require bootstrap/alert
 //= require bootstrap/dropdown
 //= require bootstrap-sprockets
+//= require material
 //= require_tree .
 
 /*===== Welcome#index - 回到页面顶端 =====*/
