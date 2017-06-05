@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   before_action :validate_search_key, only: [:search]
-  before_action :authenticate_user!, only: [:upvote]
-
+  # before_action :authenticate_user!, only: [:upvote]
+  before_action :authenticate_user!, :upvote, except: :index
   def index
 @products = case params[:order]
 when 'by_product_price'
