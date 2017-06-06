@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>A thinking reed</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <div class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <%= render "common/navbar" %>
-          <%= render "common/flashes" %>
-          <%= yield %>
-        </div>
-      </div>
-      <%= render "common/footer" %>
-    </body>
-  </html>
+    <head>
+        <title>A thinking reed</title>
+        <%= csrf_meta_tags %>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+    <body>
+        <div class="main" style="margin-bottom: 70px;">   <!-- footer距离上方70px -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <%= render "common/navbar" %>
+                        <%= render "common/flashes" %>
+                        <%= yield %>
+                    </div>
+                </div>
+            </div>
+            <%= render "common/footer" %>
+        </body>
+    </html>
