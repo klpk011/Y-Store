@@ -18,12 +18,7 @@
                         </td>
                         <span class="price">￥ <%= product.price %></span>
                         <!-- 点赞图标 -->
-                        <%= link_to like_product_path(product), method: :put do %>
-                            <span class="pi-thumbs-up">
-                                <i class="fa fa-thumbs-up fa-2x" , style="color:#F25F5C;"></i>
-                                <%= product.get_upvotes.size %>
-                            </span>
-                        <% end %>
+
                       </div>
                 <% end %>
         </div>

@@ -16,5 +16,4 @@ class Product < ApplicationRecord
    include RankedModel
    ranks :row_order
 # 点赞功能 #
-   acts_as_votable
 end

@@ -15,7 +15,7 @@
 
   <div class="review-delete">
   <% if review.user == current_user %>
- <%= link_to("Delete", product_review_path(@product, review), method: :delete, data: { confirm: "您确定要删除这条评论?"}, class: "btn btn-sm pull-right") %>
+ <%= link_to("Delete", product_review_path(@product, review), method: :delete, data: { confirm: "您确定要删除这条评论?"}, class: "btn  btn-raised btn-danger btn-xs pull-right") %>
   <% end %>
   <br>
 <hr>

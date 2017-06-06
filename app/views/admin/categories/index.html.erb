@@ -1,7 +1,7 @@
     <!--=== 新增类型 ===-->
 <div class="admin-category_groups-page">
     <div class="pull-right">
-        <%= link_to("新增类型", new_admin_category_group_path, class: "btn btn-default") %>
+        <%= link_to("新增类型", new_admin_category_group_path, class: "btn btn-raised btn-success") %>
     </div>
     <h3 class="text-center">类型一览</h3>
     <hr>
@@ -26,16 +26,16 @@
                         </td>
                         <!--=== 操作选项 ===-->
                         <td class="action-box pull-center">
-                            <%= link_to(edit_admin_category_group_path(category_group), class: "btn btn-md btn-default") do %>
+                            <%= link_to(edit_admin_category_group_path(category_group), class: "btn btn-raised btn-md btn-success") do %>
                                 <span class="fa fa-pencil"></span>
                             <% end %>
                             <!-- 发布 / 隐藏 -->
                             <% if category_group.is_hidden %>
-                                <%= link_to(publish_admin_category_group_path(category_group), :method => :post, class: "btn btn-md btn-default show-btn") do %>
+                                <%= link_to(publish_admin_category_group_path(category_group), :method => :post, class: "btn btn-raised btn-md btn-default show-btn") do %>
                                     <span class="fa fa-eye"></span>
                                 <% end %>
                             <% else %>
-                                <%= link_to(hide_admin_category_group_path(category_group), :method => :post, data: { confirm: "确定隐藏该类型？" }, class: "btn btn-md btn-default") do %>
+                                <%= link_to(hide_admin_category_group_path(category_group), :method => :post, data: { confirm: "确定隐藏该类型？" }, class: "btn btn-raised btn-md btn-danger") do %>
                                     <span class="fa fa-eye-slash"></span>
                                 <% end %>
                             <% end %>
@@ -48,7 +48,7 @@
     <!--=== 新增分类 ===-->
     <div class="admin-categorys-page">
         <div class="pull-right">
-            <%= link_to("新增分类", new_admin_category_path, class: "btn btn-default") %>
+            <%= link_to("新增分类", new_admin_category_path, class: "btn btn-raised btn-success") %>
         </div>
         <h3 class="text-center">分类一览</h3>
         <hr>
@@ -73,17 +73,17 @@
                             </td>
                             <!--=== 操作选项 ===-->
                             <td class="action-box pull-center">
-                                <%= link_to(edit_admin_category_path(category), class: "btn btn-md btn-default") do %>
+                                <%= link_to(edit_admin_category_path(category), class: "btn btn-raised btn-md btn-success") do %>
                                     <span class="fa fa-pencil"></span>
                                 <% end %>
                                 <!-- 发布 / 隐藏 -->
                                 <!-- <%= render_category_publish_or_hide(category) %> -->
                                 <% if category.is_hidden %>
-                                    <%= link_to(publish_admin_category_path(category), :method => :post, class: "btn btn-md btn-default show-btn") do %>
+                                    <%= link_to(publish_admin_category_path(category), :method => :post, class: "btn btn-raised btn-md btn-default show-btn") do %>
                                         <span class="fa fa-eye"></span>
                                     <% end %>
                                 <% else %>
-                                    <%= link_to(hide_admin_category_path(category), :method => :post, data: { confirm: "確定隱藏該分類？" }, class: "btn btn-md btn-default") do %>
+                                    <%= link_to(hide_admin_category_path(category), :method => :post, data: { confirm: "确定隐藏该分类？" }, class: "btn btn-raised btn-md btn-danger") do %>
                                         <span class="fa fa-eye-slash"></span>
                                     <% end %>
                                 <% end %>

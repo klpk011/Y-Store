@@ -1,7 +1,5 @@
 class ProductsController < ApplicationController
   before_action :validate_search_key, only: [:search]
-  # before_action :authenticate_user!, only: [:upvote]
-  before_action :authenticate_user!, :upvote, except: :index
   def index
 @products = case params[:order]
 when 'by_product_price'
@@ -39,16 +37,7 @@ when 'by_product_vodate'
   end
 
   # 点赞 #
-  def upvote
-    @product = Product.find(params[:id])
-  # if current_user && current_user.is_upvote_of?(@product)
-       @product.upvote_by current_user
-      flash[:notice] = "谢谢您对我们课程的认可！"
-  #   else
-  #  flash[:warning] = "您已经给该课程点过赞了！"
-  # end
-    redirect_to :back
-  end
+
 
   protected
 

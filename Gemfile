@@ -83,7 +83,6 @@ group :development, :test do
   gem 'awesome_rails_console'
 
   # 点赞
-  gem 'acts_as_votable', '~> 0.10.0'
 
   gem 'sqlite3'
 end
