@@ -1,0 +1,95 @@
+<h1>详情内容<span class="pull-right label label-success" ><span style="color:white"> :)<span></span></h1>
+</div>
+<div class="row">
+<div class="container">
+    <div class="row">
+        <!-- <div class="col-md-6"> -->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="panel with-nav-tabs panel-info">
+                <div class="panel-heading">
+                    <ul class="nav nav-tabs">
+                        <li class="active" width="330"><a href="#tab1info" data-toggle="tab">课程详情</a></li>
+                        <li><a href="#tab2info" data-toggle="tab">课程表</a></li>
+                        <li><a href="#tab3info" data-toggle="tab">名师介绍</a></li>
+                        <li><a href="#tab4info" data-toggle="tab">报名</a></li>
+                        <li><a href="#tab5info" data-toggle="tab">服务</a></li>
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="tab1info">
+                            适用人群：<%= simple_format(@product.Applicants) %>
+                            学习目标：<%= simple_format(@product.teaching_objectives) %>
+                            课程内容：<%= simple_format(@product.Course_Contents) %>
+                            课程特色：<%= simple_format(@product.course_features) %>
+                        </div>
+                        <div class="tab-pane fade" id="tab2info"><%= simple_format(@product.curriculum) %></div>
+                        <div class="tab-pane fade" id="tab3info"><%= simple_format(@product.Teacher_introduction) %></div>
+                        <div class="tab-pane fade" id="tab4info">
+                            上课时间<%= simple_format(@product.class_schedule) %>
+                            上课地点<%= simple_format(@product.class_location) %>
+                        </div>
+                        <div class="tab-pane fade" id="tab5info"><%= simple_format(@product.service) %>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<br/>
+<style>
+    panel.with-nav-tabs .panel-head
+    ing{
+          padding: 5px 5px 0 5px;
+          }
+          .panel.with-nav-tabs .nav-tabs{
+          border-bottom: none;
+          }
+          .panel.with-nav-tabs .nav-justified{
+          margin-bottom: -1px;
+          }
+          /********************************************************************/
+          /***
+          /********************************************************************/
+          /*** PANEL info ***/
+          .with-nav-tabs.panel-info .nav-tabs > li > a,
+          .with-nav-tabs.panel-info .nav-tabs > li > a:hover,
+          .with-nav-tabs.panel-info .nav-tabs > li > a:focus {
+            color: #fff;
+
+          }
+          .with-nav-tabs.panel-info .nav-tabs > .open > a,
+          .with-nav-tabs.panel-info .nav-tabs > .open > a:hover,
+          .with-nav-tabs.panel-info .nav-tabs > .open > a:focus,
+          .with-nav-tabs.panel-info .nav-tabs > li > a:hover,
+          .with-nav-tabs.panel-info .nav-tabs > li > a:focus {
+          color: #fff;
+          background-color: #3071a9;
+          border-color: transparent;
+          }
+          .with-nav-tabs.panel-info .nav-tabs > li.active > a,
+          .with-nav-tabs.panel-info .nav-tabs > li.active > a:hover,
+          .with-nav-tabs.panel-info .nav-tabs > li.active > a:focus {
+          color: #428bca;
+          background-color: #fff;
+          border-color: #428bca;
+          border-bottom-color: transparent;
+          }
+          .with-nav-tabs.panel-info .nav-tabs > li.dropdown .dropdown-menu {
+            background-color: #428bca;
+            border-color: #3071a9;
+          }
+          .with-nav-tabs.panel-info .nav-tabs > li.dropdown .dropdown-menu > li > a {
+            color: #fff;
+          }
+          .with-nav-tabs.panel-info .nav-tabs > li.dropdown .dropdown-menu > li > a:hover,
+          .with-nav-tabs.panel-info .nav-tabs > li.dropdown .dropdown-menu > li > a:focus {
+            background-color: #3071a9;
+          }
+          .with-nav-tabs.panel-info .nav-tabs > li.dropdown .dropdown-menu > .active > a,
+          .with-nav-tabs.panel-info .nav-tabs > li.dropdown .dropdown-menu > .active > a:hover,
+          .with-nav-tabs.panel-info .nav-tabs > li.dropdown .dropdown-menu > .active > a:focus {
+            background-color: #4a9fe9;
+          }
+</style>
