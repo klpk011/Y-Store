@@ -19,48 +19,48 @@
                 <div class="product-price"> ￥ <%= @product.price %> </div>
                 <div class="pull-right">
                     <% if @product.quantity.present? && @product.quantity > 0 %>
-                        <%= link_to("开始学习",  add_to_cart_product_path(@product), method: :post, class: "btn btn-lg btn-danger pull-right")%>
+                        <%= link_to("开始学习",  add_to_cart_product_path(@product), method: :post, class: "btn btn-raised btn-danger btn-lg pull-right")%>
                     <% else %>
                         课程已销售一空，无法购买
                        <% end %>
                 </div>
             </div>
         </div>
-        <h1>详情内容<span class="pull-right label label-default">:)</span></h1>
+        <h1>详情内容<span class="pull-right label label-success" ><span style="color:white"> :)<span></span></h1>
     </div>
     <div class="row">
         <div class="container">
             <div class="row">
                 <!-- <div class="col-md-6"> -->
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="panel with-nav-tabs panel-success">
+                    <div class="panel with-nav-tabs panel-Primary">
                         <div class="panel-heading">
                             <ul class="nav nav-tabs">
-                                <li class="active" width="330"><a href="#tab1success" data-toggle="tab">课程详情</a></li>
-                                <li><a href="#tab2success" data-toggle="tab">课程表</a></li>
-                                <li><a href="#tab3success" data-toggle="tab">名师介绍</a></li>
-                                <li><a href="#tab4success" data-toggle="tab">报名</a></li>
-                                <li><a href="#tab5success" data-toggle="tab">服务</a></li>
-                                <li><a href="#tab6success" data-toggle="tab">常见问题</a></li>
+                                <li class="active" width="330"><a href="#tab1Primary" data-toggle="tab">课程详情</a></li>
+                                <li><a href="#tab2Primary" data-toggle="tab">课程表</a></li>
+                                <li><a href="#tab3Primary" data-toggle="tab">名师介绍</a></li>
+                                <li><a href="#tab4Primary" data-toggle="tab">报名</a></li>
+                                <li><a href="#tab5Primary" data-toggle="tab">服务</a></li>
+                                <li><a href="#tab6Primary" data-toggle="tab">常见问题</a></li>
                             </ul>
                         </div>
                         <div class="panel-body">
                             <div class="tab-content">
-                                <div class="tab-pane fade in active" id="tab1success">
+                                <div class="tab-pane fade in active" id="tab1Primary">
                                     适用人群：<%= simple_format(@product.Applicants) %>
                                     学习目标：<%= simple_format(@product.teaching_objectives) %>
                                     课程内容：<%= simple_format(@product.Course_Contents) %>
                                     课程特色：<%= simple_format(@product.course_features) %>
                                 </div>
-                                <div class="tab-pane fade" id="tab2success"><%= simple_format(@product.curriculum) %></div>
-                                <div class="tab-pane fade" id="tab3success"><%= simple_format(@product.Teacher_introduction) %></div>
-                                <div class="tab-pane fade" id="tab4success">
+                                <div class="tab-pane fade" id="tab2Primary"><%= simple_format(@product.curriculum) %></div>
+                                <div class="tab-pane fade" id="tab3Primary"><%= simple_format(@product.Teacher_introduction) %></div>
+                                <div class="tab-pane fade" id="tab4Primary">
                                     上课时间<%= simple_format(@product.class_schedule) %>
                                     上课地点<%= simple_format(@product.class_location) %>
                                 </div>
-                                <div class="tab-pane fade" id="tab5success"><%= simple_format(@product.service) %>
+                                <div class="tab-pane fade" id="tab5Primary"><%= simple_format(@product.service) %>
                                 </div>
-                                <div class="tab-pane fade" id="tab6success">
+                                <div class="tab-pane fade" id="tab6Primary">
                                </div>
 
 
@@ -95,43 +95,43 @@
                                                     	margin-bottom: -1px;
                                                     }
                                                     /********************************************************************/
-                                                    /*** PANEL SUCCESS ***/
-                                                    .with-nav-tabs.panel-success .nav-tabs > li > a,
-                                                    .with-nav-tabs.panel-success .nav-tabs > li > a:hover,
-                                                    .with-nav-tabs.panel-success .nav-tabs > li > a:focus {
+                                                    /*** PANEL Primary ***/
+                                                    .with-nav-tabs.panel-Primary .nav-tabs > li > a,
+                                                    .with-nav-tabs.panel-Primary .nav-tabs > li > a:hover,
+                                                    .with-nav-tabs.panel-Primary .nav-tabs > li > a:focus {
                                                     	color: #3c763d;
                                                     }
-                                                    .with-nav-tabs.panel-success .nav-tabs > .open > a,
-                                                    .with-nav-tabs.panel-success .nav-tabs > .open > a:hover,
-                                                    .with-nav-tabs.panel-success .nav-tabs > .open > a:focus,
-                                                    .with-nav-tabs.panel-success .nav-tabs > li > a:hover,
-                                                    .with-nav-tabs.panel-success .nav-tabs > li > a:focus {
+                                                    .with-nav-tabs.panel-Primary .nav-tabs > .open > a,
+                                                    .with-nav-tabs.panel-Primary .nav-tabs > .open > a:hover,
+                                                    .with-nav-tabs.panel-Primary .nav-tabs > .open > a:focus,
+                                                    .with-nav-tabs.panel-Primary .nav-tabs > li > a:hover,
+                                                    .with-nav-tabs.panel-Primary .nav-tabs > li > a:focus {
                                                     	color: #3c763d;
                                                     	background-color: #d6e9c6;
                                                     	border-color: transparent;
                                                     }
-                                                    .with-nav-tabs.panel-success .nav-tabs > li.active > a,
-                                                    .with-nav-tabs.panel-success .nav-tabs > li.active > a:hover,
-                                                    .with-nav-tabs.panel-success .nav-tabs > li.active > a:focus {
+                                                    .with-nav-tabs.panel-Primary .nav-tabs > li.active > a,
+                                                    .with-nav-tabs.panel-Primary .nav-tabs > li.active > a:hover,
+                                                    .with-nav-tabs.panel-Primary .nav-tabs > li.active > a:focus {
                                                     	color: #3c763d;
                                                     	background-color: #fff;
                                                     	border-color: #d6e9c6;
                                                     	border-bottom-color: transparent;
                                                     }
-                                                    .with-nav-tabs.panel-success .nav-tabs > li.dropdown .dropdown-menu {
+                                                    .with-nav-tabs.panel-Primary .nav-tabs > li.dropdown .dropdown-menu {
                                                         background-color: #dff0d8;
                                                         border-color: #d6e9c6;
                                                     }
-                                                    .with-nav-tabs.panel-success .nav-tabs > li.dropdown .dropdown-menu > li > a {
+                                                    .with-nav-tabs.panel-Primary .nav-tabs > li.dropdown .dropdown-menu > li > a {
                                                         color: #3c763d;
                                                     }
-                                                    .with-nav-tabs.panel-success .nav-tabs > li.dropdown .dropdown-menu > li > a:hover,
-                                                    .with-nav-tabs.panel-success .nav-tabs > li.dropdown .dropdown-menu > li > a:focus {
+                                                    .with-nav-tabs.panel-Primary .nav-tabs > li.dropdown .dropdown-menu > li > a:hover,
+                                                    .with-nav-tabs.panel-Primary .nav-tabs > li.dropdown .dropdown-menu > li > a:focus {
                                                         background-color: #d6e9c6;
                                                     }
-                                                    .with-nav-tabs.panel-success .nav-tabs > li.dropdown .dropdown-menu > .active > a,
-                                                    .with-nav-tabs.panel-success .nav-tabs > li.dropdown .dropdown-menu > .active > a:hover,
-                                                    .with-nav-tabs.panel-success .nav-tabs > li.dropdown .dropdown-menu > .active > a:focus {
+                                                    .with-nav-tabs.panel-Primary .nav-tabs > li.dropdown .dropdown-menu > .active > a,
+                                                    .with-nav-tabs.panel-Primary .nav-tabs > li.dropdown .dropdown-menu > .active > a:hover,
+                                                    .with-nav-tabs.panel-Primary .nav-tabs > li.dropdown .dropdown-menu > .active > a:focus {
                                                         color: #fff;
                                                         background-color: #3c763d;
                                                     }

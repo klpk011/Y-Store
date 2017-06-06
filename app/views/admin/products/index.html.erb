@@ -1,6 +1,6 @@
 <div class="admin-products-page">
     <div class="pull-right">
-        <%= link_to("新增商品", new_admin_product_path, class: "btn btn-default") %>
+        <%= link_to("新增商品", new_admin_product_path, class: "btn btn-raised btn-success") %>
     </div>
     <h3 class="text-center">全部商品</h3>
     <hr>
@@ -49,15 +49,15 @@
                             <%= product.price %>
                         </td>
                         <td>
-                            <%= link_to "上移", reorder_admin_product_path(product, :position => :up), :method => :post, :class => "btn btn-default" %>
-                            <%= link_to "下移", reorder_admin_product_path(product, :position => :down), :method => :post, :class => "btn btn-default" %>
+                            <%= link_to "上移", reorder_admin_product_path(product, :position => :up), :method => :post, :class => "btn btn-raised btn-default" %>
+                            <%= link_to "下移", reorder_admin_product_path(product, :position => :down), :method => :post, :class => "btn btn-raised btn-default" %>
                         </br>
-                        <%= link_to "置顶", reorder_admin_product_path(product, :position => :first), :method => :post, :class => "btn btn-default" %>
-                        <%= link_to "置底", reorder_admin_product_path(product, :position => :last), :method => :post, :class => "btn btn-default" %>
+                        <%= link_to "置顶", reorder_admin_product_path(product, :position => :first), :method => :post, :class => "btn btn-raised btn-default" %>
+                        <%= link_to "置底", reorder_admin_product_path(product, :position => :last), :method => :post, :class => "btn btn-raised btn-default" %>
                         <hr>
                         <%= link_to("Edit", edit_admin_product_path(product)) %>
                         |
-                        <%= link_to("Destroy", admin_product_path(product), method: :delete, data: { :confirm => "Are you sure?"}) %>
+                        <%= link_to("Destroy", admin_product_path(product), method: :delete, data: { :confirm => "你确定找删除这门课程吗?"}) %>
                     </td>
                 </tr>
             <% end %>
