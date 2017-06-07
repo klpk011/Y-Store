@@ -18,4 +18,8 @@ class Product < ApplicationRecord
 # 点赞功能 #
    acts_as_votable
 
+# 收藏功能 #
+   has_many :favorites
+   has_many :favorite_products, through: :favorites, source: :product
+
 end

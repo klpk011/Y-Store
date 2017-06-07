@@ -17,6 +17,22 @@
                 </div>
                 <div> 数量 : <%= @product.quantity %> </div>
                 <div class="product-price"> ￥ <%= @product.price %> </div>
+
+                <!-- 收藏清单 -->
+                 <div class='row'>
+          <div class='left-box wish'>
+            <% if current_user && current_user.has_favorites?(@product) %>
+            <%= link_to quit_to_favorite_product_path(@product), method: :post do %>
+              <i class='fa fa-check fa-fw'> </i>已收藏本课程
+              <% end %>
+            <% else %>
+              <%= link_to add_to_favorite_product_path(@product), method: :post do %>
+                <i class='fa fa-plus fa-fw'> </i>加入收藏
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+
                 <div class="pull-right">
                     <% if @product.quantity.present? && @product.quantity > 0 %>
                         <%= link_to("开始学习",  add_to_cart_product_path(@product), method: :post, class: "btn btn-raised btn-danger btn-lg pull-right")%>
