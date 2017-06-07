@@ -43,10 +43,15 @@ Rails.application.routes.draw do
     collection do
       get :search
     end
-    # 添加到购物车 #
     member do
+      # 添加到购物车 #
       post :add_to_cart
+      # 课程点赞 #
       put 'like', to: 'products#upvote'
+      # 收藏课程 #
+      post :add_to_favorite
+      # 取消收藏的课程 #
+      post :quit_to_favorite
     end
   end
 
@@ -75,5 +80,9 @@ Rails.application.routes.draw do
   namespace :account do
     # 订单记录 #
     resources :orders
+    resources :products do
+      # 取消收藏的课程 #
+      post :quit_to_favorite
+    end
   end
 end

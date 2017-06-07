@@ -1,19 +1,19 @@
 class ProductsController < ApplicationController
   before_action :validate_search_key, only: [:search]
-  before_action :authenticate_user!, only:[:upvote]
+  before_action :authenticate_user!, only: [:upvote, :favorite]
 
   def index
-@products = case params[:order]
-when 'by_product_price'
-      Product.order('price DESC').paginate(:page => params[:page], :per_page => 12)
-when 'by_product_quantity'
-      Product.order('quantity DESC').paginate(:page => params[:page], :per_page => 12)
-when 'by_product_vodate'
-      Product.order('created_at DESC').paginate(:page => params[:page], :per_page => 12)
-    else
-      Product.rank(:row_order).paginate(:page => params[:page], :per_page => 12) #根据后台课程排序
-    end
-  end
+    @products = case params[:order]
+                when 'by_product_price'
+                  Product.order('price DESC').paginate(page: params[:page], per_page: 12)
+                when 'by_product_quantity'
+                  Product.order('quantity DESC').paginate(page: params[:page], per_page: 12)
+                when 'by_product_vodate'
+                  Product.order('created_at DESC').paginate(page: params[:page], per_page: 12)
+                else
+                  Product.rank(:row_order).paginate(page: params[:page], per_page: 12) # 根据后台课程排序
+          end
+end
 
   def show
     @product = Product.find(params[:id])
@@ -41,12 +41,35 @@ when 'by_product_vodate'
   # 点赞 #
   def upvote
     @product = Product.find(params[:id])
-       @product.upvote_by current_user
-      flash[:notice] = "谢谢您对我们课程的认可！"
-      redirect_to :back
+    @product.upvote_by current_user
+    flash[:notice] = '谢谢您对我们课程的认可！'
+    redirect_to :back
+  end
+
+  # 添加收藏 #
+  def add_to_favorite
+    @product = Product.find(params[:id])
+    if !current_user.has_favorites?(@product)
+      current_user.add_to_favorites!(@product)
+      flash[:notice] = '收藏本课程成功！'
+    else
+      flash[:warning] = '已收藏本课程'
+   end
+    redirect_to product_path(@product)
+  end
+
+  # 取消收藏 #
+  def quit_to_favorite
+    @product = Product.find(params[:id])
+    if current_user.has_favorites?(@product)
+      current_user.quit_to_favorite!(@product)
+      flash[:alert] = '取消收藏本课程'
+    end
+    redirect_to product_path(@product)
   end
 
   protected
+
   def validate_search_key
     # 去除特殊字符
     #  @query_string = params[:q].gsub(/\\|\'|\/|\?/, "") if params[:q].present?
