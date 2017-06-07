@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
   before_action :validate_search_key, only: [:search]
+  before_action :authenticate_user!, only:[:upvote]
+
   def index
 @products = case params[:order]
 when 'by_product_price'
@@ -37,10 +39,14 @@ when 'by_product_vodate'
   end
 
   # 点赞 #
-
+  def upvote
+    @product = Product.find(params[:id])
+       @product.upvote_by current_user
+      flash[:notice] = "谢谢您对我们课程的认可！"
+      redirect_to :back
+  end
 
   protected
-
   def validate_search_key
     # 去除特殊字符
     #  @query_string = params[:q].gsub(/\\|\'|\/|\?/, "") if params[:q].present?

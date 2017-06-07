@@ -74,6 +74,10 @@ gem 'will_paginate-bootstrap'
 # 订单切换状态
 gem 'aasm'
 
+# 点赞
+gem 'acts_as_votable', '~> 0.10.0'
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   # Debug 工具
@@ -81,9 +85,6 @@ group :development, :test do
   gem 'pry'
   # Rails Console 排版
   gem 'awesome_rails_console'
-
-  # 点赞
-
   gem 'sqlite3'
 end
 
