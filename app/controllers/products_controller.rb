@@ -19,16 +19,32 @@ end
     @product = Product.find(params[:id])
   end
 
+  # def add_to_cart
+  #   @product = Product.find(params[:id])
+  #   if !current_cart.products.include?(@product)
+  #     current_cart.add_product_to_cart(@product)
+  #     flash[:notice] = "你已成功将课程：#{@product.name} 加入购物车"
+  #   else
+  #     flash[:warning] = '你的购物车内已有此课程'
+  #   end
+  #   redirect_to :back
+  # end
+
+# 让 PRODUCTS_CONTROLLER 接收 QUANTITY 参数 #
   def add_to_cart
-    @product = Product.find(params[:id])
-    if !current_cart.products.include?(@product)
-      current_cart.add_product_to_cart(@product)
-      flash[:notice] = "你已成功将课程：#{@product.name} 加入购物车"
-    else
-      flash[:warning] = '你的购物车内已有此课程'
-    end
-    redirect_to :back
+  @product = Product.find(params[:id])
+  @quantity = params[:quantity].to_i
+  # 判断加入购物车的商品是否超过库存
+
+  if @quantity > @product.quantity
+    @quantity = @product.quantity
+    flash[:warning] = "您选择的课程数量超过库存，实际加入购物车的课程为#{@quantity}件。"
+  else
+    current_cart.add(@product, @quantity)
   end
+  redirect_to product_path(@product)
+end
+
 
   def search
     if @query_string.present?
