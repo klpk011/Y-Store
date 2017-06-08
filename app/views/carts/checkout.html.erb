@@ -48,24 +48,25 @@
 
 
 
-          <legend> 订购人</legend>
-          <div class="form-group col-lg-6">
-            <%= f.input :billing_name  %>
-          </div>
-          <div class="form-group col-lg-6">
-            <%= f.input :billing_address  %>
-          </div>
+      <legend> 订购人</legend>
+<div class="form-group col-lg-6">
+<%= f.input :billing_name,placeholder: '订货人姓名' %>
+</div>
+<div class="form-group col-lg-6">
+<%= f.input :billing_address,placeholder: '订货人地址'  %>
+</div>
 
-          <legend> 收货人</legend>
-          <div class="form-group col-lg-6">
-           <%= f.input :shipping_name  %>
-          </div>
-          <div class="form-group col-lg-6">
-            <%= f.input :shipping_address  %>
-          </div>
+<legend> 收货人</legend>
+<div class="form-group col-lg-6">
+<%= f.input :shipping_name,placeholder: '收货人姓名'  %>
+</div>
+<div class="form-group col-lg-6">
+<%= f.input :shipping_address,placeholder: '收货人地址'  %>
+</div>
+
 
         <div class="checkout">
-          <%= f.submit "生成订单", class: "btn btn-lg btn-danger pull-right",
+          <%= f.submit "提交订单", class: "btn btn-raised btn-lg btn-danger pull-right",
                        data: { disable_with: "Submitting..." } %>
         </div>
       <% end %>
