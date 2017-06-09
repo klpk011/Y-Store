@@ -3,8 +3,6 @@ class Admin::CategoryGroupsController < ApplicationController
   before_action :admin_required
   layout 'admin'
 
-  layout 'admin'
-
   def show
     @category_group = CategoryGroup.find(params[:id])
   end

@@ -1,10 +1,9 @@
 <div class="product-box">
     <div class="container">
         <!--=== 课程类型 Banner ===-->
-        <section class="intro-box">
+  <section class="intro-box">
   <div class="row">
     <div class="col-md-12">
-
         <% if params[:id].present? %>
             <%= image_tag(@product.category.category_group.image, class: "background-image") %>
         <% elsif params[:category].present? %>
@@ -49,37 +48,3 @@
         </div>
     </div>
 </div>
-<style >
-    .product-box {
-                  text-align: center;
-                  padding: 0 0 100px 0;
-}
-                .background-image {
-                width: 100%;
-                margin-bottom: 20px;
-                }
-
-
-                /*===== Intro 首页-广告轮播 =====*/
-.intro-box {
-  /*===== 轮播内容 =====*/
-  .item {
-    /* 标题 */
-    h3 {
-      margin-top: -40%; //标题高度
-      font-size: 50px; //文字大小
-      letter-spacing: 5px; //文字间距
-    }
-
-    /* 内文 */
-    p {
-      font-size: 20px;
-    }
-
-    /* 图片 */
-    img {
-      width: 100%;
-    }
-  }
-
-</style>
