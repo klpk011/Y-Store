@@ -313,3 +313,16 @@ html { height: 100%;}
       }
     }
   }
+
+
+  /*===== 網站通用設置 ======*/
+body {
+  overflow-x: hidden; //裁切內容，超出視窗不顯示
+  letter-spacing: 1px;
+  font-size: 16px;
+  position: relative;
+
+  a {
+    text-decoration:none !important;
+  }
+}
