@@ -3,20 +3,37 @@ class ProductsController < ApplicationController
   before_action :authenticate_user!, only: [:upvote, :favorite]
 
   def index
-    @products = case params[:order]
-                when 'by_product_price'
-                  Product.order('price DESC').paginate(page: params[:page], per_page: 12)
-                when 'by_product_quantity'
-                  Product.order('quantity DESC').paginate(page: params[:page], per_page: 12)
-                when 'by_product_vodate'
-                  Product.order('created_at DESC').paginate(page: params[:page], per_page: 12)
-                else
-                  Product.rank(:row_order).paginate(page: params[:page], per_page: 12) # 根据后台课程排序
-          end
+
+    @category_groups = CategoryGroup.published
+    @products = Product.rank(:row_order).all
+    # 判斷是否篩選分類
+    if params[:category].present?
+      @category_s = params[:category]
+      @category = Category.find_by(name: @category_s)
+      @products = Product.where(category: @category).paginate(page: params[:page], per_page: 12)
+
+    # 判斷是否篩選類型
+    elsif params[:group].present?
+      @group_s = params[:group]
+      @group = CategoryGroup.find_by(name: @group_s)
+      @products = Product.joins(:category).where('categories.category_group_id' => @group.id).paginate(page: params[:page], per_page: 12)
+    end
+
+    # @products = case params[:order]
+    #             when 'by_product_price'
+    #               Product.order('price DESC').paginate(page: params[:page], per_page: 12)
+    #             when 'by_product_quantity'
+    #               Product.order('quantity DESC').paginate(page: params[:page], per_page: 12)
+    #             when 'by_product_vodate'
+    #               Product.order('created_at DESC').paginate(page: params[:page], per_page: 12)
+    #             else
+    #               Product.rank(:row_order).paginate(page: params[:page], per_page: 12) # 根据后台课程排序
+    #             end
 end
 
   def show
     @product = Product.find(params[:id])
+    @category_groups = CategoryGroup.published
   end
 
   # def add_to_cart
@@ -54,6 +71,7 @@ end
       # 显示符合条件的课程
       search_result = Product.ransack(@search_criteria).result(distinct: true)
       @products = search_result.paginate(page: params[:page], per_page: 8)
+      @category_groups = CategoryGroup.published
     end
   end
 

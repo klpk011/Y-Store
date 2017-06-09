@@ -269,3 +269,47 @@ html { height: 100%;}
      margin-left: 15px;
      font-weight: 600;
    }
+
+   /*===== 產品列表內容設置 =====*/
+  .product-content {
+    img {
+      width: 100%;
+      margin: 7.5px auto 7.5px auto;
+    }
+
+    h2 {
+      margin-top: 150px;
+    }
+
+
+  }
+
+  .product-info {
+    text-align: left;
+    line-height: 14px;
+    min-height: 55px;
+  }
+
+  /*===== 產品路徑設置 =====*/
+  .path-box {
+    text-align: left;
+    height: 20px;
+
+    .right-box {
+      button {
+        margin: -15px 0 -15px 0;
+        padding: 7.5px 10px 7.5px 10px;
+        border: 2px solid #666;
+        color: #333;
+      }
+
+      button:focus {
+        background-color: #fff;
+        color: #333;
+      }
+
+      ul {
+        margin-top: 15px;
+      }
+    }
+  }

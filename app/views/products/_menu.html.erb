@@ -1,4 +1,38 @@
+<!--=== 商品類型 & 品牌選單 ===-->
+<div class="btn-group">
+    <!--=== 類型選單 ===-->
+    <% @category_groups.each do |category_group| %>
+        <div class='dropdown btn-group clearfix'>
+            <button class='btn dropdown-toggle' type='button' data-toggle='dropdown'>
+                <%= category_group.name %> <i class="fa fa-angle-down"></i>
+            </button>
+            <!-- 選項：列出該類型所有分類 -->
+            <ul class='dropdown-menu'>
+                <% category_group.categories.each do |category| %>
+                    <li>
+                        <%= link_to(category.name, products_path(:category => category.name)) %>
+                    </li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+    <!--=== 产品页面路径 ===-->
+    <div class="left-box">
+        <%= link_to products_path do %>
+            A thinking reed
+        <% end %>
+        <% if params[:id].present? %>
+            / <a href="../products?group=<%= @product.category.category_group.name %>"><%= @product.category.category_group.name %></a> / <a href="../products?category=<%= @product.category.name %>"><%= @product.category.name %></a> / <a href="<%= @product.id %>"><%= @product.name %></a>
+        <% elsif params[:category].present? %>
+            / <a href="products?group=<%= @category.category_group.name %>"><%= @category.category_group.name %></a> / <a href="products?category=<%= @category.name %>"><%= @category.name %></a>
+        <% elsif params[:group].present? %>
+            / <a href="products?group=<%= @group.name %>"><%= @group.name %></a>
+        <% end %>
+    </div>
+</div>
+
 <!-- 课程排序 -->
+<!-- <% if current_page?('/products/search') %>
 <div class="order-wrap">
     <ul class="order-list">
         <p class="list1" >课程排序：</p>
@@ -7,3 +41,35 @@
         <ol  class="order-listItem"><a href="/products">上架时间</a></ol>
     </ul>
 </div>
+<% end %> -->
+
+<!-- /*<style >
+/*===== Dropdown ======*/
+.dropdown-menu{
+background-color: #fff;
+min-width: 175px;
+// box-shadow: 0 5px 10px #aaa;
+
+a {
+  color: #000;
+  padding: 8px 17px;
+}
+
+a:hover {
+  background-color: #f0f0f0;
+  color: #eb5424 !important;
+}
+}
+
+/* 下拉選單三角箭頭 */
+.dropdown-menu:before {
+content: "";
+border-bottom: 10px solid #fff;
+border-right: 10px solid transparent;
+border-left: 10px solid transparent;
+position: absolute;
+top: -10px;
+right: 16px;
+z-index: 10;
+}
+</style>*/ -->
