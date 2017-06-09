@@ -55,3 +55,41 @@
   border-radius: 3px;
   border: 1px solid #FFF;
 }
+
+
+/*===== Categories 首页-商品分类 =====*/
+.categories-box {
+  // background-color: #F5F5F5;
+  text-align: center;
+
+  a {
+    text-decoration:none;
+    color: #002E2E;
+  }
+
+  img {
+    width: 300px;
+  }
+
+  /*===== Content 分类內容 =====*/
+  .category-content {
+    padding: 50px 0 0 0;
+
+    // border-right: 2.5px dashed #ccc;
+    /*===== Box 分类图片 =====*/
+    h3 {
+      padding: 20px 0 20px 0;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    p {
+      // text-align: justify;
+      // letter-spacing: 1.5px;
+      // padding: 0 62.5px 50px 62.5px;
+      color: #666;
+      line-height: 26px;
+
+    }
+  }
+}
