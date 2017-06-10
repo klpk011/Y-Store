@@ -6,13 +6,13 @@ class ProductsController < ApplicationController
 
     @category_groups = CategoryGroup.published
     @products = Product.rank(:row_order).all
-    # 判斷是否篩選分類
+    # 判断是否筛选分类
     if params[:category].present?
-      @category_s = params[:category]
-      @category = Category.find_by(name: @category_s)
-      @products = Product.where(category: @category).paginate(page: params[:page], per_page: 12)
+            @category_s = params[:category]
+       @category = Category.find_by(name: @category_s)
+       @products = Product.where(category: @category).paginate(page: params[:page], per_page: 12)
 
-    # 判斷是否篩選類型
+    # 判断是否筛选类型
     elsif params[:group].present?
       @group_s = params[:group]
       @group = CategoryGroup.find_by(name: @group_s)

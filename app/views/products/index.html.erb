@@ -11,7 +11,7 @@
         <% elsif params[:group].present? %>
             <%= image_tag(@group.image, class: "background-image") %>
         <% else %>
-            <%= image_tag("product_bg.jpg", class: "background-image") %>
+            <%= image_tag("product_bg.jpg", class: "background-image", style: "width: 100%") %>
         <% end %>
       </div>
   </div>
