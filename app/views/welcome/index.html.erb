@@ -64,7 +64,53 @@
     </div>
   </div>
 </div>
-
+<div class="well block-4 text-center">
+    <h2>课程选择</h2>
+  <!--===== 商品類型 =====-->
+<section class="categories-box">
+  <div class="row">
+    <div class="col-md-4 category-content">
+      <div class="well feature">
+      <%= link_to 'https://a-thinking-reed.herokuapp.com/products?group=%20%E8%8B%B1%E8%AF%AD%E5%AE%9E%E7%94%A8%E8%AF%BE%E7%A8%8B' , class: "category_1" do %>
+        <div class="category-box">
+          <%= image_tag("category_1.jpg") %>
+        </div>
+        <div>
+          <h3>英语实用课程</h3>
+          <p>爱上英语，快乐使用英语</p>
+        </div>
+      <% end %>
+      </div>
+    </div>
+    <div class="col-md-4 category-content">
+        <div class="well feature">
+      <%= link_to 'https://a-thinking-reed.herokuapp.com/products?group=%E5%85%83%E8%AE%A4%E7%9F%A5%E7%B3%BB%E5%88%97%E8%AF%BE%E7%A8%8B' , class: "category_2" do %>
+        <div class="category-box">
+          <%= image_tag("category_2.jpg") %>
+        </div>
+        <div>
+          <h3>元认知系列课程</h3>
+          <p>开启学习元认知	</p>
+        </div>
+      <% end %>
+      </div>
+    </div>
+    <div class="col-md-4 category-content">
+      <div class="well feature">
+      <%= link_to 'https://a-thinking-reed.herokuapp.com/products?group=%E8%80%83%E8%AF%95%E8%8B%B1%E8%AF%AD', class: "category_3" do %>
+        <div class="category-box">
+          <%= image_tag("category_3.jpg") %>
+        </div>
+        <div>
+          <h3>考试英语</h3>
+          <p>	提升实力，得到高分</p>
+        </div>
+      <% end %>
+    </div>
+    </div>
+  </div>
+</section>
+  </div>
 <div class="well block-4 text-center">
   <h2>学员们迫不及待的心情</h2>
   <p>听听他们说</p>
@@ -100,4 +146,28 @@
 <!--===== 开始学习 =====-->
 <div class="well block-5 text-center">
   <%= link_to "实现梦想", products_path, class: "btn btn-raised btn-danger btn-lg" %>
+</div>
+
+<!-- Script to Activate the Carousel -->
+<script>
+  $('.carousel').carousel({
+    interval: 5000 //changes the speed
+  })
+
+  $('#bootstrap-touch-slider').bsTouchSlider();
+</script>
+
+<script>
+  $(document).ready(function () {
+    $('.material-button-toggle').click(function () {
+      $(this).toggleClass('open');
+      $('.option').toggleClass('scale-on');
+    });
+  });
+</script>
+
+    <!--===== Go top（回到顶端） =====-->
+    <div class="goTop">
+        <span class="fa fa-chevron-up"></span>
+    </div>
 </div>

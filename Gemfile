@@ -43,8 +43,6 @@ gem "devise-i18n"
 # 前端
 gem 'bootstrap-sass'
 gem 'simple_form'
-gem 'will_paginate'
-gem 'will_paginate-bootstrap'
 gem 'font-awesome-rails'
 
 # 搜索
