@@ -11,7 +11,6 @@
   color: #717171; /*字体颜色*/
   padding-left: 2%;
   padding-top:3%;
-
 }
 
 .order-list {
@@ -41,9 +40,13 @@
   text-decoration: none; /*不要下划线*/
 }
 
-.pro-in{
+.pro-in {
   padding-top:5%;
 
+}
+
+.product-page .nav-tabs {
+  background: transparent;
 }
 
 // 数量输入框

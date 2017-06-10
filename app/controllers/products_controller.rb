@@ -8,9 +8,8 @@ class ProductsController < ApplicationController
     @products = Product.rank(:row_order).all
     # 判斷是否篩選分類
     if params[:category].present?
-      @category_s = params[:category]
-      @category = Category.find_by(name: @category_s)
-      @products = Product.where(category: @category).paginate(page: params[:page], per_page: 12)
+      @categories = CategoryGroup.find_by(name: params[:category]).categories
+      @products = Product.where(category: @categories).paginate(page: params[:page], per_page: 12)
 
     # 判斷是否篩選類型
     elsif params[:group].present?
